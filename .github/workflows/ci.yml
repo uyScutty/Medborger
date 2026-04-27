@@ -1,0 +1,128 @@
+name: CI
+
+on:
+  push:
+    branches: [main, "claude/**"]
+  pull_request:
+    branches: [main]
+
+jobs:
+  backend:
+    name: Django backend
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_DB: medborger_test
+          POSTGRES_USER: medborger
+          POSTGRES_PASSWORD: testpass
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+    env:
+      DJANGO_SETTINGS_MODULE: medborger.settings.development
+      DJANGO_SECRET_KEY: ci-secret-key-not-for-production
+      DATABASE_URL: postgres://medborger:testpass@localhost:5432/medborger_test
+      REDIS_URL: ""
+      STRIPE_PUBLISHABLE_KEY: pk_test_placeholder
+      STRIPE_SECRET_KEY: sk_test_placeholder
+      STRIPE_WEBHOOK_SECRET: whsec_placeholder
+      STRIPE_PRICE_MONTHLY: price_placeholder
+      STRIPE_PRICE_YEARLY: price_placeholder
+      EMAIL_HOST: localhost
+      EMAIL_PORT: 1025
+      EMAIL_USE_TLS: "False"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: backend/requirements/development.txt
+
+      - name: Install dependencies
+        working-directory: backend
+        run: pip install -r requirements/development.txt
+
+      - name: Run migrations
+        working-directory: backend
+        run: |
+          cp .env.example .env
+          python manage.py migrate
+
+      - name: Run tests
+        working-directory: backend
+        run: pytest --cov=apps --cov-report=xml -q
+
+      - name: Check for security issues
+        working-directory: backend
+        run: python manage.py check --deploy --settings=medborger.settings.production 2>&1 | grep -v "WARNINGS" || true
+
+  frontend:
+    name: Next.js frontend
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install dependencies
+        working-directory: frontend
+        run: npm ci
+
+      - name: Type check
+        working-directory: frontend
+        run: npm run type-check
+
+      - name: Lint
+        working-directory: frontend
+        run: npm run lint
+
+      - name: Build
+        working-directory: frontend
+        env:
+          NEXT_PUBLIC_API_URL: http://localhost:8000
+        run: npm run build
+
+  security:
+    name: Dependency security scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install pip-audit
+        run: pip install pip-audit
+
+      - name: Audit Python dependencies
+        working-directory: backend
+        run: pip-audit -r requirements/base.txt --ignore-vuln PYSEC-2023-62
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Audit Node dependencies
+        working-directory: frontend
+        run: npm audit --audit-level=high
