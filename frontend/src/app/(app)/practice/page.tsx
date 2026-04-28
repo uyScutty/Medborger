@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { ProgressBar } from "@/components/ui/ProgressBar";
 import type { Category, ExamAttempt, ExamMode, Question } from "@/types";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 
@@ -195,7 +196,7 @@ export default function PracticePage() {
         {!user.is_premium && (
           <div className="rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800">
             Du er på gratisplanen. Kun gratis spørgsmål inkluderes.{" "}
-            <a href="/priser" className="underline font-medium">Opgradér for fuld adgang.</a>
+            <Link href="/priser" className="underline font-medium">Opgradér for fuld adgang.</Link>
           </div>
         )}
 

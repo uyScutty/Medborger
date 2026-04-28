@@ -57,11 +57,11 @@ export function useAuth(): AuthContextValue {
   return ctx;
 }
 
-export function useRequireAuth(): User {
+export function useRequireAuth(): User | null {
   const { user, loading } = useAuth();
   const router = useRouter();
   useEffect(() => {
     if (!loading && !user) router.push("/login");
   }, [user, loading, router]);
-  return user!;
+  return user;
 }

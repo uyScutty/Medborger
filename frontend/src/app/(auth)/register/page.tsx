@@ -40,7 +40,7 @@ export default function RegisterPage() {
     }
   }
 
-  const field = (id: keyof typeof form, label: string, type = "text", autocomplete = id) => (
+  const field = (id: keyof typeof form, label: string, type = "text", autocomplete: string = id) => (
     <div>
       <label htmlFor={id} className="block text-sm font-medium text-gray-700 mb-1">{label}</label>
       <input

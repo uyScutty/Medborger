@@ -16,7 +16,11 @@ import { useCallback, useEffect, useState } from "react";
 
 type State = "list" | "running" | "complete";
 
-const monthName: Record<number, string> = { 1: "Januar", 8: "August" };
+const monthName: Record<number, string> = {
+  1: "Januar", 2: "Februar", 3: "Marts", 4: "April",
+  5: "Maj", 6: "Juni", 7: "Juli", 8: "August",
+  9: "September", 10: "Oktober", 11: "November", 12: "December",
+};
 
 export default function ExamsPage() {
   const user = useRequireAuth();
@@ -82,25 +86,27 @@ export default function ExamsPage() {
     );
   }
 
-  if (state === "running" && currentQuestion) {
+  if (state === "running") {
     return (
       <div className="mx-auto max-w-2xl px-4 py-10">
         <div className="mb-4 flex items-center justify-between gap-4">
-          <div>
-            <p className="text-sm font-medium text-gray-700">{selectedExam?.title}</p>
-          </div>
+          <p className="text-sm font-medium text-gray-700">{selectedExam?.title}</p>
           <div className="flex items-center gap-3">
             <ProgressBar value={currentIndex} max={questionIds.length} color="red" />
             <ExamTimer totalMinutes={selectedExam?.total_time_minutes ?? 45} onTimeUp={handleTimeUp} />
           </div>
         </div>
-        <QuestionCard
-          question={currentQuestion}
-          questionNumber={currentIndex + 1}
-          totalQuestions={questionIds.length}
-          onAnswer={handleAnswer}
-          onNext={handleNext}
-        />
+        {!currentQuestion ? (
+          <div className="flex h-64 items-center justify-center text-gray-400">Indlæser spørgsmål…</div>
+        ) : (
+          <QuestionCard
+            question={currentQuestion}
+            questionNumber={currentIndex + 1}
+            totalQuestions={questionIds.length}
+            onAnswer={handleAnswer}
+            onNext={handleNext}
+          />
+        )}
       </div>
     );
   }
