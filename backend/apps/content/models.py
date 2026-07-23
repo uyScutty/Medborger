@@ -5,7 +5,7 @@ class Category(models.Model):
     name = models.CharField(max_length=100)
     slug = models.SlugField(unique=True)
     description = models.TextField(blank=True)
-    icon = models.CharField(max_length=50, blank=True, help_text="Emoji or icon identifier")
+    icon = models.CharField(max_length=50, blank=True)
     order = models.PositiveSmallIntegerField(default=0)
 
     class Meta:
@@ -17,22 +17,47 @@ class Category(models.Model):
         return self.name
 
 
+class Subcategory(models.Model):
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name="subcategories")
+    name = models.CharField(max_length=100)
+    slug = models.SlugField(unique=True)
+    order = models.PositiveSmallIntegerField(default=0)
+
+    class Meta:
+        db_table = "content_subcategory"
+        ordering = ["order", "name"]
+        verbose_name_plural = "subcategories"
+
+    def __str__(self) -> str:
+        return f"{self.category.name} › {self.name}"
+
+
 class Question(models.Model):
     class Difficulty(models.TextChoices):
         EASY = "easy", "Let"
         MEDIUM = "medium", "Mellem"
         HARD = "hard", "Svær"
 
+    class Status(models.TextChoices):
+        VALID = "valid", "Gyldig"
+        UPDATED = "updated", "Opdateret"
+        RETIRED = "retired", "Udgået"
+
     text = models.TextField()
     category = models.ForeignKey(Category, on_delete=models.PROTECT, related_name="questions")
+    subcategory = models.ForeignKey(
+        Subcategory, null=True, blank=True, on_delete=models.SET_NULL, related_name="questions"
+    )
     difficulty = models.CharField(max_length=10, choices=Difficulty.choices, default=Difficulty.MEDIUM)
-    explanation = models.TextField(help_text="Shown after the user answers")
     image = models.ImageField(upload_to="questions/", null=True, blank=True)
     is_active = models.BooleanField(default=True)
-    is_free = models.BooleanField(
-        default=False,
-        help_text="Available without a premium subscription",
-    )
+    is_free = models.BooleanField(default=False)
+    status = models.CharField(max_length=10, choices=Status.choices, default=Status.VALID)
+    explanation = models.TextField(blank=True)
+    explanation_sentences = models.JSONField(default=list, blank=True)
+    correct_answer_summary = models.JSONField(default=dict, blank=True)
+    historical_note_sentences = models.JSONField(default=list, blank=True)
+    original_correct_text = models.CharField(max_length=255, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -49,6 +74,7 @@ class Choice(models.Model):
     text = models.CharField(max_length=500)
     is_correct = models.BooleanField(default=False)
     order = models.PositiveSmallIntegerField(default=0)
+    option_letter = models.CharField(max_length=1, blank=True)
 
     class Meta:
         db_table = "content_choice"
@@ -60,19 +86,14 @@ class Choice(models.Model):
 
 
 class OfficialExam(models.Model):
-    """A historical official indfødsretsprøven exam."""
-
-    class Month(models.IntegerChoices):
-        JANUARY = 1, "Januar"
-        AUGUST = 8, "August"
-
     title = models.CharField(max_length=200)
     year = models.PositiveSmallIntegerField()
-    month = models.PositiveSmallIntegerField(choices=Month.choices)
+    month = models.PositiveSmallIntegerField(help_text="Numeric month (1=Januar, 8=August, etc.)")
+    season = models.CharField(max_length=10, blank=True, help_text="'sommer' or 'vinter' from official naming")
     description = models.TextField(blank=True)
-    pass_score = models.PositiveSmallIntegerField(default=32, help_text="Minimum correct answers to pass")
+    pass_score = models.PositiveSmallIntegerField(default=32)
     total_time_minutes = models.PositiveSmallIntegerField(default=45)
-    is_free = models.BooleanField(default=False, help_text="Accessible on free tier")
+    is_free = models.BooleanField(default=False)
     is_published = models.BooleanField(default=True)
     questions = models.ManyToManyField(Question, through="OfficialExamQuestion", related_name="official_exams")
 

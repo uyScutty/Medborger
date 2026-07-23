@@ -4,6 +4,7 @@ import { useAuth } from "@/lib/auth/context";
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "../ui/Button";
+import { LanguageSelector } from "../ui/LanguageSelector";
 
 export function Header() {
   const { user, logout } = useAuth();
@@ -17,8 +18,8 @@ export function Header() {
           Medborger
         </Link>
 
-        {/* Desktop nav */}
-        <nav className="hidden items-center gap-6 sm:flex">
+        <nav className="hidden items-center gap-4 sm:flex">
+          <LanguageSelector />
           {user ? (
             <>
               <Link href="/dashboard" className="text-sm text-gray-600 hover:text-brand-red transition-colors">Dashboard</Link>
@@ -37,7 +38,6 @@ export function Header() {
           )}
         </nav>
 
-        {/* Mobile hamburger */}
         <button
           className="sm:hidden rounded p-1 text-gray-600 hover:bg-gray-100"
           aria-label="Menu"

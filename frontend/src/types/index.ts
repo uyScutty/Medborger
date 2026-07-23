@@ -1,5 +1,18 @@
 export type SubscriptionTier = "free" | "premium";
 
+export type QuestionStatus = "valid" | "updated" | "retired";
+export type SupportedLanguage = "da" | "en" | "ar" | "so" | "tr" | "ur";
+
+export interface BilingualSentence {
+  da: string;
+  en?: string;
+  ar?: string;
+  so?: string;
+  tr?: string;
+  ur?: string;
+  [lang: string]: string | undefined;
+}
+
 export interface User {
   id: number;
   email: string;
@@ -34,11 +47,18 @@ export interface Question {
   text: string;
   category: number;
   category_name: string;
+  subcategory?: number | null;
+  subcategory_name?: string | null;
   difficulty: "easy" | "medium" | "hard";
   image: string | null;
   is_free: boolean;
+  status: QuestionStatus;
   choices: Choice[];
   explanation?: string;
+  explanation_sentences?: BilingualSentence[];
+  correct_answer_summary?: BilingualSentence;
+  historical_note_sentences?: BilingualSentence[];
+  original_correct_text?: string;
 }
 
 export type ExamMode = "practice" | "mock_exam" | "official_exam";

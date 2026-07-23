@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/lib/auth/context";
+import { LanguageProvider } from "@/lib/language/context";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="da">
       <body className={inter.className}>
+        <LanguageProvider>
         <AuthProvider>
           <div className="flex min-h-screen flex-col">
             <Header />
@@ -33,6 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Footer />
           </div>
         </AuthProvider>
+        </LanguageProvider>
       </body>
     </html>
   );

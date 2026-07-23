@@ -1,0 +1,126 @@
+[
+  {
+    "question_id": "test_01",
+    "test_info": { "year": 2024, "season": "sommer", "number": 1 },
+    "category_id": "demokrati_retssamfund",
+    "subcategory_id": "grundlov_rettigheder",
+    "question_text": "Hvornår blev den nuværende danske grundlov vedtaget?",
+    "options": [
+      { "id": "A", "text": "1849" },
+      { "id": "B", "text": "1915" },
+      { "id": "C", "text": "1953" }
+    ],
+    "current_correct_option": "C",
+    "current_status": "Gyldig",
+    "is_free": true,
+    "difficulty": "medium",
+    "explanation": "Den nuværende grundlov blev vedtaget den 5. juni 1953.",
+    "explanation_sentences": [
+      { "da": "Den nuværende grundlov blev vedtaget den 5. juni 1953.", "ar": "تم اعتماد الدستور الحالي في 5 يونيو 1953." },
+      { "da": "Den afløste grundloven fra 1849, som var Danmarks første grundlov.", "ar": "حلّ محل دستور عام 1849، الذي كان أول دستور للدنمارك." },
+      { "da": "Den 5. juni fejres derfor som Grundlovsdag — en national helligdag.", "ar": "لذلك يُحتفل بيوم 5 يونيو باعتباره يوم الدستور — وهو عطلة وطنية." }
+    ],
+    "correct_answer_summary": { "da": "Den nuværende grundlov er fra 1953.", "ar": "الدستور الحالي صدر عام 1953." }
+  },
+  {
+    "question_id": "test_02",
+    "test_info": { "year": 2024, "season": "sommer", "number": 2 },
+    "category_id": "demokrati_retssamfund",
+    "subcategory_id": "folketing_regering",
+    "question_text": "Hvor mange medlemmer har Folketinget?",
+    "options": [
+      { "id": "A", "text": "100 medlemmer" },
+      { "id": "B", "text": "179 medlemmer" },
+      { "id": "C", "text": "200 medlemmer" }
+    ],
+    "current_correct_option": "B",
+    "current_status": "Gyldig",
+    "is_free": true,
+    "difficulty": "easy",
+    "explanation": "Folketinget har 179 medlemmer.",
+    "explanation_sentences": [
+      { "da": "Folketinget har 179 medlemmer i alt.", "ar": "يضم البرلمان الدنماركي (الفولكتينج) 179 عضواً." },
+      { "da": "175 medlemmer er valgt i Danmark, 2 i Grønland og 2 på Færøerne.", "ar": "175 عضواً منتخبون من الدنمارك، واثنان من غرينلاند، واثنان من جزر فارو." },
+      { "da": "Valg til Folketinget afholdes mindst hvert fjerde år.", "ar": "تُجرى الانتخابات البرلمانية مرة على الأقل كل أربع سنوات." }
+    ],
+    "correct_answer_summary": { "da": "Folketinget har 179 medlemmer.", "ar": "يضم البرلمان 179 عضواً." }
+  },
+  {
+    "question_id": "test_03",
+    "test_info": { "year": 2024, "season": "sommer", "number": 3 },
+    "category_id": "hverdagsliv_arbejdsmarked",
+    "subcategory_id": "ligestilling_familie",
+    "question_text": "Hvor mange uger har en kvinde i Danmark ret til fri abort?",
+    "options": [
+      { "id": "A", "text": "12 uger" },
+      { "id": "B", "text": "18 uger" },
+      { "id": "C", "text": "24 uger" }
+    ],
+    "current_correct_option": "B",
+    "original_correct_option": "A",
+    "current_status": "Opdateret",
+    "is_free": true,
+    "difficulty": "medium",
+    "explanation": "Grænsen for fri abort er nu 18 uger.",
+    "explanation_sentences": [
+      { "da": "I Danmark har kvinder ret til fri abort.", "ar": "في الدنمارك، يحق للمرأة الإجهاض الحر." },
+      { "da": "Grænsen er 18 uger regnet fra første dag i sidste menstruation.", "ar": "الحد الزمني هو 18 أسبوعاً تُحسب من اليوم الأول للدورة الشهرية الأخيرة." }
+    ],
+    "correct_answer_summary": { "da": "Grænsen for fri abort er 18 uger.", "ar": "الحد الزمني للإجهاض الحر هو 18 أسبوعاً." },
+    "historical_note_sentences": [
+      { "da": "I den originale prøve fra 2016 var det korrekte svar 'A: 12 uger'.", "ar": "في الاختبار الأصلي لعام 2016، كانت الإجابة الصحيحة 'أ: 12 أسبوعاً'." },
+      { "da": "Loven blev ændret i 2023, og grænsen er nu 18 uger.", "ar": "تم تعديل القانون في عام 2023، وأصبح الحد الآن 18 أسبوعاً." }
+    ]
+  },
+  {
+    "question_id": "test_04",
+    "test_info": { "year": 2024, "season": "sommer", "number": 4 },
+    "category_id": "hverdagsliv_arbejdsmarked",
+    "subcategory_id": "sundhed_velfaerd",
+    "question_text": "Hvad er det danske sundhedsvæsen kendetegnet ved?",
+    "options": [
+      { "id": "A", "text": "Det er privat og kræver forsikring" },
+      { "id": "B", "text": "Det er gratis for alle borgere og finansieres over skatten" },
+      { "id": "C", "text": "Det koster en fast egenbetaling ved hvert besøg" }
+    ],
+    "current_correct_option": "B",
+    "current_status": "Gyldig",
+    "is_free": true,
+    "difficulty": "easy",
+    "explanation": "Sundhedsvæsenet i Danmark er gratis og finansieres via skatterne.",
+    "explanation_sentences": [
+      { "da": "Danmark har et offentligt sundhedsvæsen, der er gratis for alle borgere.", "ar": "تمتلك الدنمارك نظاماً صحياً عاماً مجانياً لجميع المواطنين." },
+      { "da": "Det finansieres via skattebetalinger og kaldes det offentlige sygehusvæsen.", "ar": "يُموَّل هذا النظام من خلال الضرائب ويُعرف بالخدمات الصحية العامة." },
+      { "da": "Du kan kontakte din praktiserende læge uden beregning.", "ar": "يمكنك التواصل مع طبيبك العام دون أي تكلفة." }
+    ],
+    "correct_answer_summary": { "da": "Sundhedsvæsenet er gratis og finansieres over skatten.", "ar": "الرعاية الصحية مجانية وتُموَّل من الضرائب." }
+  },
+  {
+    "question_id": "test_05",
+    "test_info": { "year": 2024, "season": "sommer", "number": 5 },
+    "category_id": "kultur_historie",
+    "subcategory_id": "kongehus_rigsfaellesskab",
+    "question_text": "Hvad hedder den nuværende regent af Danmark?",
+    "options": [
+      { "id": "A", "text": "Dronning Margrethe II" },
+      { "id": "B", "text": "Kong Frederik X" },
+      { "id": "C", "text": "Kong Christian X" }
+    ],
+    "current_correct_option": "B",
+    "original_correct_option": "A",
+    "current_status": "Opdateret",
+    "is_free": true,
+    "difficulty": "easy",
+    "explanation": "Kong Frederik X blev regent den 14. januar 2024.",
+    "explanation_sentences": [
+      { "da": "Danmarks nuværende regent er Kong Frederik X.", "ar": "الحاكم الحالي للدنمارك هو الملك فريدريك العاشر." },
+      { "da": "Han besteg tronen den 14. januar 2024, da hans mor Dronning Margrethe II abdicerede.", "ar": "اعتلى العرش في 14 يناير 2024، عندما تنازلت والدته الملكة مارغريت الثانية عن العرش." },
+      { "da": "Dronning Margrethe II regerede Danmark i 52 år.", "ar": "حكمت الملكة مارغريت الثانية الدنمارك لمدة 52 عاماً." }
+    ],
+    "correct_answer_summary": { "da": "Den nuværende regent er Kong Frederik X.", "ar": "الحاكم الحالي هو الملك فريدريك العاشر." },
+    "historical_note_sentences": [
+      { "da": "Tidligere prøver havde Dronning Margrethe II som korrekt svar.", "ar": "كانت الاختبارات السابقة تعدّ الملكة مارغريت الثانية الإجابة الصحيحة." },
+      { "da": "Den 14. januar 2024 abdicerede hun, og Kong Frederik X overtog tronen.", "ar": "في 14 يناير 2024، تنازلت عن العرش وتولّى الملك فريدريك العاشر السلطة." }
+    ]
+  }
+]
