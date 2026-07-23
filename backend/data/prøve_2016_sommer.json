@@ -1,0 +1,427 @@
+[
+  {
+    "question_id": "2016_s_01",
+    "test_info": { "year": 2016, "season": "sommer", "number": 1 },
+    "category_id": "demokrati_retssamfund",
+    "subcategory_id": "grundlov_rettigheder",
+    "question_text": "I hvilket år blev den første danske grundlov vedtaget?",
+    "options": [
+      { "id": "A", "text": "I 1849" },
+      { "id": "B", "text": "I 1915" },
+      { "id": "C", "text": "I 1953" }
+    ],
+    "correct_option_now": "A",
+    "is_changed_since_2016": false,
+    "historical_change_info": null,
+    "explanation": "Danmarks første grundlov blev underskrevet af Frederik 7. den 5. juni 1849.",
+    "is_free": true
+  },
+  {
+    "question_id": "2016_s_02",
+    "test_info": { "year": 2016, "season": "sommer", "number": 2 },
+    "category_id": "hverdagsliv_arbejdsmarked",
+    "subcategory_id": "arbejdsmarked",
+    "question_text": "Hvad dækker begrebet 'Den Danske Model' over på det danske arbejdsmarked?",
+    "options": [
+      { "id": "A", "text": "At løn og arbejdsforhold primært aftales mellem arbejdsmarkedets parter" },
+      { "id": "B", "text": "At Folketinget vedtager lov om en fast mindsteløn" },
+      { "id": "C", "text": "At staten bestemmer arbejdstiden i den private sektor" }
+    ],
+    "correct_option_now": "A",
+    "is_changed_since_2016": false,
+    "historical_change_info": null,
+    "explanation": "Den danske model bygger på frivillige aftaler (overenskomster) mellem fagforeninger og arbejdsgiverforeninger.",
+    "is_free": true
+  },
+  {
+    "question_id": "2016_s_03",
+    "test_info": { "year": 2016, "season": "sommer", "number": 3 },
+    "category_id": "demokrati_retssamfund",
+    "subcategory_id": "folketing_regering",
+    "question_text": "Hvor mange medlemmer er der i alt i Folketinget?",
+    "options": [
+      { "id": "A", "text": "175 medlemmer" },
+      { "id": "B", "text": "179 medlemmer" },
+      { "id": "C", "text": "183 medlemmer" }
+    ],
+    "correct_option_now": "B",
+    "is_changed_since_2016": false,
+    "historical_change_info": null,
+    "explanation": "Folketinget har 179 medlemmer (175 fra Danmark, 2 fra Færøerne og 2 fra Grønland).",
+    "is_free": true
+  },
+  {
+    "question_id": "2016_s_04",
+    "test_info": { "year": 2016, "season": "sommer", "number": 4 },
+    "category_id": "hverdagsliv_arbejdsmarked",
+    "subcategory_id": "ligestilling_familie",
+    "question_text": "Hvad er den generelle grænse for fri abort i Danmark uden særlig tilladelse?",
+    "options": [
+      { "id": "A", "text": "12. graviditetsuge" },
+      { "id": "B", "text": "18. graviditetsuge" },
+      { "id": "C", "text": "24. graviditetsuge" }
+    ],
+    "correct_option_now": "B",
+    "is_changed_since_2016": true,
+    "historical_change_info": "I 2016 var svarmulighed A (12. uge) det rigtige svar. Lovgivningen blev dog senere ændret af Folketinget, så grænsen for fri abort blev hævet til 18. uge.",
+    "explanation": "Grænsen for fri abort i Danmark er i dag udgangen af 18. graviditetsuge.",
+    "is_free": true
+  },
+  {
+    "question_id": "2016_s_05",
+    "test_info": { "year": 2016, "season": "sommer", "number": 5 },
+    "category_id": "kultur_historie",
+    "subcategory_id": "traditioner",
+    "question_text": "Hvorfor fejres Grundlovsdag den 5. juni?",
+    "options": [
+      { "id": "A", "text": "Til minde om Danmarks befrielse i 1945" },
+      { "id": "B", "text": "Til minde om vedtagelsen af den første grundlov i 1849" },
+      { "id": "C", "text": "Til minde om Genforeningen i 1920" }
+    ],
+    "correct_option_now": "B",
+    "is_changed_since_2016": false,
+    "historical_change_info": null,
+    "explanation": "Grundlovsdag markerer underskrivelsen af Danmarks første grundlov den 5. juni 1849.",
+    "is_free": true
+  },
+  {
+    "question_id": "2016_s_06",
+    "test_info": { "year": 2016, "season": "sommer", "number": 6 },
+    "category_id": "demokrati_retssamfund",
+    "subcategory_id": "domstole_politi",
+    "question_text": "Hvilken magt har domstolene ifølge princippet om magtens tredeling?",
+    "options": [
+      { "id": "A", "text": "Den lovgivende magt" },
+      { "id": "B", "text": "Den udøvende magt" },
+      { "id": "C", "text": "Den dømmende magt" }
+    ],
+    "correct_option_now": "C",
+    "is_changed_since_2016": false,
+    "historical_change_info": null,
+    "explanation": "Magtens tredeling opdeler magten i den lovgivende (Folketinget/regeringen), udøvende (regeringen/politiet) og dømmende magt (domstolene).",
+    "is_free": true
+  },
+  {
+    "question_id": "2016_s_07",
+    "test_info": { "year": 2016, "season": "sommer", "number": 7 },
+    "category_id": "kultur_historie",
+    "subcategory_id": "historie",
+    "question_text": "I hvilket århundrede blev Danmark et kristent land ifølge Jellingstenen?",
+    "options": [
+      { "id": "A", "text": "I det 10. århundrede (900-tallet)" },
+      { "id": "B", "text": "I det 12. århundrede (1100-tallet)" },
+      { "id": "C", "text": "I det 15. århundrede (1400-tallet)" }
+    ],
+    "correct_option_now": "A",
+    "is_changed_since_2016": false,
+    "historical_change_info": null,
+    "explanation": "Harald Blåtand rejste Jellingstenen ca. år 965 og gjorde danerne kristne.",
+    "is_free": true
+  },
+  {
+    "question_id": "2016_s_08",
+    "test_info": { "year": 2016, "season": "sommer", "number": 8 },
+    "category_id": "hverdagsliv_arbejdsmarked",
+    "subcategory_id": "uddannelse_boern",
+    "question_text": "Er der undervisningspligt eller skolepligt i Danmark?",
+    "options": [
+      { "id": "A", "text": "Der er skolepligt (alle skal gå i folkeskole)" },
+      { "id": "B", "text": "Der er undervisningspligt (børn skal modtage undervisning, men kan f.eks. hjemmeundervises)" },
+      { "id": "C", "text": "Der er hverken undervisnings- eller skolepligt" }
+    ],
+    "correct_option_now": "B",
+    "is_changed_since_2016": false,
+    "historical_change_info": null,
+    "explanation": "Danmark har undervisningspligt i 10 år, men ikke pligt til at gå i en specifik skole.",
+    "is_free": true
+  },
+  {
+    "question_id": "2016_s_09",
+    "test_info": { "year": 2016, "season": "sommer", "number": 9 },
+    "category_id": "demokrati_retssamfund",
+    "subcategory_id": "lokaldemokrati",
+    "question_text": "Hvor ofte afholdes der kommunal- og regionsvalg i Danmark?",
+    "options": [
+      { "id": "A", "text": "Hvert 3. år" },
+      { "id": "B", "text": "Hvert 4. år" },
+      { "id": "C", "text": "Hvert 5. år" }
+    ],
+    "correct_option_now": "B",
+    "is_changed_since_2016": false,
+    "historical_change_info": null,
+    "explanation": "Kommunal- og regionsvalg afholdes fast hvert fjerde år den tredje tirsdag i november.",
+    "is_free": true
+  },
+  {
+    "question_id": "2016_s_10",
+    "test_info": { "year": 2016, "season": "sommer", "number": 10 },
+    "category_id": "kultur_historie",
+    "subcategory_id": "kongehus_rigsfaellesskab",
+    "question_text": "Hvilke tre lande udgør Rigsfællesskabet?",
+    "options": [
+      { "id": "A", "text": "Danmark, Færøerne og Grønland" },
+      { "id": "B", "text": "Danmark, Island og Norge" },
+      { "id": "C", "text": "Danmark, Færøerne og Åland" }
+    ],
+    "correct_option_now": "A",
+    "is_changed_since_2016": false,
+    "historical_change_info": null,
+    "explanation": "Rigsfællesskabet består af Danmark, Færøerne og Grønland.",
+    "is_free": true
+  },
+  {
+    "question_id": "2016_s_11",
+    "test_info": { "year": 2016, "season": "sommer", "number": 11 },
+    "category_id": "hverdagsliv_arbejdsmarked",
+    "subcategory_id": "sundhed_velfaerd",
+    "question_text": "Hvordan finansieres det danske sundhedsvæsen primært?",
+    "options": [
+      { "id": "A", "text": "Gennem private sygeforsikringer" },
+      { "id": "B", "text": "Gennem indkomstskatter" },
+      { "id": "C", "text": "Gennem brugerbetaling ved lægebesøg" }
+    ],
+    "correct_option_now": "B",
+    "is_changed_since_2016": false,
+    "historical_change_info": null,
+    "explanation": "Det danske sundhedsvæsen er skattefinansieret, hvilket giver fri og lige adgang til behandling.",
+    "is_free": true
+  },
+  {
+    "question_id": "2016_s_12",
+    "test_info": { "year": 2016, "season": "sommer", "number": 12 },
+    "category_id": "kultur_historie",
+    "subcategory_id": "foreningsliv_kultur",
+    "question_text": "Hvad kendetegner det danske foreningsliv?",
+    "options": [
+      { "id": "A", "text": "Det er primært drevet af statslige embedsmænd" },
+      { "id": "B", "text": "Det bygger i høj grad på frivilligt arbejde og engagement" },
+      { "id": "C", "text": "Det er kun åbent for borgere over 18 år" }
+    ],
+    "correct_option_now": "B",
+    "is_changed_since_2016": false,
+    "historical_change_info": null,
+    "explanation": "Foreningslivet og frivilligt arbejde er en central grundsten i det danske lokalsamfund og demokrati.",
+    "is_free": true
+  },
+  {
+    "question_id": "2016_s_13",
+    "test_info": { "year": 2016, "season": "sommer", "number": 13 },
+    "category_id": "demokrati_retssamfund",
+    "subcategory_id": "grundlov_rettigheder",
+    "question_text": "Hvad betyder ytringsfrihed ifølge Grundloven?",
+    "options": [
+      { "id": "A", "text": "At man må sige og trykke hvad som helst uden ansvar over for domstolene" },
+      { "id": "B", "text": "At der ikke er censur, men man står til ansvar over for domstolene for det, man udtaler" },
+      { "id": "C", "text": "At staten skal godkende aviser, før de trykkes" }
+    ],
+    "correct_option_now": "B",
+    "is_changed_since_2016": false,
+    "historical_change_info": null,
+    "explanation": "Censur er forbudt i Danmark, men man kan efterfølgende idømmes straf ved domstolene for f.eks. bagvaskelse eller trusler.",
+    "is_free": true
+  },
+  {
+    "question_id": "2016_s_14",
+    "test_info": { "year": 2016, "season": "sommer", "number": 14 },
+    "category_id": "kultur_historie",
+    "subcategory_id": "historie",
+    "question_text": "Hvornår fik kvinder i Danmark stemmeret til Folketinget?",
+    "options": [
+      { "id": "A", "text": "I 1849" },
+      { "id": "B", "text": "I 1915" },
+      { "id": "C", "text": "I 1953" }
+    ],
+    "correct_option_now": "B",
+    "is_changed_since_2016": false,
+    "historical_change_info": null,
+    "explanation": "Ved grundlovsændringen i 1915 opnåede kvinder og tjenestefolk stemmeret til Rigsdagen.",
+    "is_free": true
+  },
+  {
+    "question_id": "2016_s_15",
+    "test_info": { "year": 2016, "season": "sommer", "number": 15 },
+    "category_id": "hverdagsliv_arbejdsmarked",
+    "subcategory_id": "arbejdsmarked",
+    "question_text": "Hvad er en 'overenskomst' på det danske arbejdsmarked?",
+    "options": [
+      { "id": "A", "text": "En aftale mellem en medarbejder og chefen om personlig løn" },
+      { "id": "B", "text": "En kollektiv aftale om løn og arbejdsvilkår indgået mellem fagforening og arbejdsgiverforening" },
+      { "id": "C", "text": "En lov vedtaget af Beskæftigelsesministeriet" }
+    ],
+    "correct_option_now": "B",
+    "is_changed_since_2016": false,
+    "historical_change_info": null,
+    "explanation": "Overenskomster fastsætter rammerne for arbejdstid, mindsteløn, pension og andre vilkår inden for et fag.",
+    "is_free": true
+  },
+  {
+    "question_id": "2016_s_16",
+    "test_info": { "year": 2016, "season": "sommer", "number": 16 },
+    "category_id": "kultur_historie",
+    "subcategory_id": "kongehus_rigsfaellesskab",
+    "question_text": "Hvilken rolle har Monarken (Kongen/Dronningen) i det danske politiske system?",
+    "options": [
+      { "id": "A", "text": "Monarken har den reelle politiske magt og kan nedlægge veto mod love" },
+      { "id": "B", "text": "Monarken har en formel og repræsentativ rolle uden politisk magt" },
+      { "id": "C", "text": "Monarken er formand for Folketinget" }
+    ],
+    "correct_option_now": "B",
+    "is_changed_since_2016": true,
+    "historical_change_info": "Selve den konstitutionelle rolle er uændret, men regenten har skiftet status: I 2016 var Dronning Margrethe 2. regent. Efter tronskiftet i januar 2024 er Kong Frederik 10. Danmarks monark.",
+    "explanation": "Danmark er et konstitutionelt monarki, hvor monarken underskriver love sammen med en minister, men i praksis udøver ingen politisk magt.",
+    "is_free": true
+  },
+  {
+    "question_id": "2016_s_17",
+    "test_info": { "year": 2016, "season": "sommer", "number": 17 },
+    "category_id": "demokrati_retssamfund",
+    "subcategory_id": "folketing_regering",
+    "question_text": "Hvad kræves der for, at et lovforslag bliver til gældende lov i Danmark?",
+    "options": [
+      { "id": "A", "text": "Det skal behandles 3 gange i Folketinget og vedtages, hvorefter det stadfæstes af monarken og ministeren" },
+      { "id": "B", "text": "Det skal sendes til folkeafstemning hver gang" },
+      { "id": "C", "text": "Det skal godkendes af Højesteret" }
+    ],
+    "correct_option_now": "A",
+    "is_changed_since_2016": false,
+    "historical_change_info": null,
+    "explanation": "Lovforslag gennemgår tre behandlinger i Folketingssalen, før de stemmes om og underskrives.",
+    "is_free": true
+  },
+  {
+    "question_id": "2016_s_18",
+    "test_info": { "year": 2016, "season": "sommer", "number": 18 },
+    "category_id": "hverdagsliv_arbejdsmarked",
+    "subcategory_id": "ligestilling_familie",
+    "question_text": "Hvilket princip gælder ved opdragelse af børn i Danmark ifølge lovgivningen?",
+    "options": [
+      { "id": "A", "text": "Forældre har ret til at bruge mild korporlig afstraffelse (genstande/lussinger)" },
+      { "id": "B", "text": "Børn har ret til beskyttelse mod vold, og genstande/afstraffelse er helt forbudt ved lov" },
+      { "id": "C", "text": "Det er op til de enkelte kommuner at bestemme reglerne for afstraffelse" }
+    ],
+    "correct_option_now": "B",
+    "is_changed_since_2016": false,
+    "historical_change_info": null,
+    "explanation": "Revselsesretten blev afskaffet i Danmark i 1997, hvormed enhver form for fysisk afstraffelse af børn blev ulovlig.",
+    "is_free": true
+  },
+  {
+    "question_id": "2016_s_19",
+    "test_info": { "year": 2016, "season": "sommer", "number": 19 },
+    "category_id": "kultur_historie",
+    "subcategory_id": "historie",
+    "question_text": "Hvilken begivenhed skete i Danmark den 9. april 1940?",
+    "options": [
+      { "id": "A", "text": "Danmark blev befriets af de allierede styrker" },
+      { "id": "B", "text": "Tyskland besatte Danmark under 2. verdenskrig" },
+      { "id": "C", "text": "Danmark stemte ja til optagelse i EF/EU" }
+    ],
+    "correct_option_now": "B",
+    "is_changed_since_2016": false,
+    "historical_change_info": null,
+    "explanation": "Den 9. april 1940 blev Danmark angrebet og besat af nazistiske tyske tropper.",
+    "is_free": true
+  },
+  {
+    "question_id": "2016_s_20",
+    "test_info": { "year": 2016, "season": "sommer", "number": 20 },
+    "category_id": "hverdagsliv_arbejdsmarked",
+    "subcategory_id": "uddannelse_boern",
+    "question_text": "Hvad er SU (Statens Uddannelsesstøtte)?",
+    "options": [
+      { "id": "A", "text": "Et lån, som alle studerende skal betale fuldt tilbage" },
+      { "id": "B", "text": "En økonomisk støtte (stipendium/lån), som staten giver til studerende fra 18 år" },
+      { "id": "C", "text": "En støtte, der kun gives til private uddannelser" }
+    ],
+    "correct_option_now": "B",
+    "is_changed_since_2016": false,
+    "historical_change_info": null,
+    "explanation": "SU sikrer, at uddannelse i Danmark er økonomisk tilgængelig for alle uanset social baggrund.",
+    "is_free": true
+  },
+  {
+    "question_id": "2016_s_21",
+    "test_info": { "year": 2016, "season": "sommer", "number": 21 },
+    "category_id": "demokrati_retssamfund",
+    "subcategory_id": "lokaldemokrati",
+    "question_text": "Hvad er kommunernes primære ansvarsområde i Danmark?",
+    "options": [
+      { "id": "A", "text": "Sygehuse og regional udvikling" },
+      { "id": "B", "text": "Folkeskoler, daginstitutioner, ældrepleje og lokale veje" },
+      { "id": "C", "text": "Politi, forsvar og udenrigspolitik" }
+    ],
+    "correct_option_now": "B",
+    "is_changed_since_2016": false,
+    "historical_change_info": null,
+    "explanation": "Kommunerne varetager de nære borgerrettede velfærdsopgaver, mens regionerne driver sygehusene.",
+    "is_free": true
+  },
+  {
+    "question_id": "2016_s_22",
+    "test_info": { "year": 2016, "season": "sommer", "number": 22 },
+    "category_id": "kultur_historie",
+    "subcategory_id": "traditioner",
+    "question_text": "Hvad fejres den 5. maj i Danmark?",
+    "options": [
+      { "id": "A", "text": "Grundlovsdag" },
+      { "id": "B", "text": "Danmarks Befrielse i 1945" },
+      { "id": "C", "text": "Valdemarsdag" }
+    ],
+    "correct_option_now": "B",
+    "is_changed_since_2016": false,
+    "historical_change_info": null,
+    "explanation": "Den 5. maj markerer Danmarks befrielse efter den tyske besættelse under 2. verdenskrig.",
+    "is_free": true
+  },
+  {
+    "question_id": "2016_s_23",
+    "test_info": { "year": 2016, "season": "sommer", "number": 23 },
+    "category_id": "demokrati_retssamfund",
+    "subcategory_id": "domstole_politi",
+    "question_text": "Hvad gælder for retsmøder og retssager i Danmark som udgangspunkt?",
+    "options": [
+      { "id": "A", "text": "De er altid lukkede for offentligheden" },
+      { "id": "B", "text": "De er offentlige, så enhver som udgangspunkt kan overvære dem" },
+      { "id": "C", "text": "Kun dommere og advokater må være til stede" }
+    ],
+    "correct_option_now": "B",
+    "is_changed_since_2016": false,
+    "historical_change_info": null,
+    "explanation": "Offentlighed i retsplejen er et grundlæggende princip i det danske retssamfund.",
+    "is_free": true
+  },
+  {
+    "question_id": "2016_s_24",
+    "test_info": { "year": 2016, "season": "sommer", "number": 24 },
+    "category_id": "hverdagsliv_arbejdsmarked",
+    "subcategory_id": "sundhed_velfaerd",
+    "question_text": "Hvem har ret til at få tildelt en praktiserende læge (egen læge) i Danmark?",
+    "options": [
+      { "id": "A", "text": "Kun folk, der er i fuldtidsbeskæftigelse" },
+      { "id": "B", "text": "Alle personer med bopæl i Danmark og et CPR-nummer" },
+      { "id": "C", "text": "Kun personer over 65 år" }
+    ],
+    "correct_option_now": "B",
+    "is_changed_since_2016": false,
+    "historical_change_info": null,
+    "explanation": "Enhver med bopæl i Danmark har ret til sygesikring og tilknytning til en praktiserende læge.",
+    "is_free": true
+  },
+  {
+    "question_id": "2016_s_25",
+    "test_info": { "year": 2016, "season": "sommer", "number": 25 },
+    "category_id": "kultur_historie",
+    "subcategory_id": "historie",
+    "question_text": "I hvilket år blev Danmark medlem af EF (det nuværende EU)?",
+    "options": [
+      { "id": "A", "text": "I 1973" },
+      { "id": "B", "text": "I 1989" },
+      { "id": "C", "text": "I 1992" }
+    ],
+    "correct_option_now": "A",
+    "is_changed_since_2016": false,
+    "historical_change_info": null,
+    "explanation": "Efter en folkeafstemning i 1972 blev Danmark officielt medlem af EF den 1. januar 1973.",
+    "is_free": true
+  }
+]

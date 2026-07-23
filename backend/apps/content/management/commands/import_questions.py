@@ -62,6 +62,14 @@ STATUS_MAP = {
     "retired": Question.Status.RETIRED,
 }
 
+def _resolve_status(item: dict) -> "Question.Status":
+    """Accept either current_status string or is_changed_since_* boolean."""
+    if "current_status" in item:
+        return STATUS_MAP.get(item["current_status"], Question.Status.VALID)
+    if item.get("is_changed_since_2016"):
+        return Question.Status.UPDATED
+    return Question.Status.VALID
+
 
 class Command(BaseCommand):
     help = "Import questions from a JSON file"
@@ -132,9 +140,8 @@ class Command(BaseCommand):
                 defaults={"category": category, "name": sub_slug.replace("_", " ").title()},
             )
 
-        # Status
-        raw_status = item.get("current_status", "Gyldig")
-        status = STATUS_MAP.get(raw_status, Question.Status.VALID)
+        # Status — supports current_status string OR is_changed_since_* boolean
+        status = _resolve_status(item)
 
         question_text = item["question_text"]
 
@@ -145,7 +152,8 @@ class Command(BaseCommand):
             return "skipped"
 
         options_list = item.get("options", [])
-        correct_letter = item.get("current_correct_option", "")
+        # Accept both field name variants
+        correct_letter = item.get("current_correct_option") or item.get("correct_option_now", "")
         original_letter = item.get("original_correct_option", "")
 
         # Find original correct text for historical note
@@ -156,16 +164,29 @@ class Command(BaseCommand):
                     original_correct_text = opt.get("text", "")
                     break
 
+        # Build explanation_sentences: prefer explicit field, else wrap plain text
+        explanation_text = item.get("explanation", "")
+        explanation_sentences = item.get("explanation_sentences") or (
+            [{"da": explanation_text}] if explanation_text else []
+        )
+
+        # Build historical_note_sentences: prefer explicit field, else wrap plain string
+        historical_note_sentences = item.get("historical_note_sentences") or []
+        if not historical_note_sentences:
+            historical_str = item.get("historical_change_info") or ""
+            if historical_str:
+                historical_note_sentences = [{"da": historical_str}]
+
         q_kwargs = dict(
             category=category,
             subcategory=subcategory,
             difficulty=item.get("difficulty", Question.Difficulty.MEDIUM),
             is_free=item.get("is_free", False),
             status=status,
-            explanation=item.get("explanation", ""),
-            explanation_sentences=item.get("explanation_sentences", []),
+            explanation=explanation_text,
+            explanation_sentences=explanation_sentences,
             correct_answer_summary=item.get("correct_answer_summary", {}),
-            historical_note_sentences=item.get("historical_note_sentences", []),
+            historical_note_sentences=historical_note_sentences,
             original_correct_text=original_correct_text,
         )
 
