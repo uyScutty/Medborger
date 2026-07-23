@@ -22,6 +22,7 @@ FREE_QUESTIONS_PER_DAY = 10
 class CategoryListView(generics.ListAPIView):
     serializer_class = CategorySerializer
     permission_classes = [permissions.AllowAny]
+    pagination_class = None
 
     @method_decorator(cache_page(60 * 15))
     def get(self, *args, **kwargs):
@@ -61,6 +62,7 @@ class QuestionDetailView(generics.RetrieveAPIView):
 class OfficialExamListView(generics.ListAPIView):
     serializer_class = OfficialExamListSerializer
     permission_classes = [permissions.IsAuthenticated]
+    pagination_class = None
 
     def get_queryset(self):
         qs = OfficialExam.objects.filter(is_published=True)
