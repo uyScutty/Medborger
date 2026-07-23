@@ -21,7 +21,7 @@ class CategorySerializer(serializers.ModelSerializer):
 class ChoiceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Choice
-        fields = ("id", "text", "order")
+        fields = ("id", "text", "text_translations", "order")
 
 
 class ChoiceWithAnswerSerializer(ChoiceSerializer):
@@ -37,7 +37,7 @@ class QuestionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Question
         fields = (
-            "id", "text", "category", "category_name",
+            "id", "text", "text_translations", "category", "category_name",
             "subcategory", "subcategory_name",
             "difficulty", "image", "is_free", "status", "choices",
         )

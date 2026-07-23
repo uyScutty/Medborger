@@ -38,6 +38,7 @@ export interface Category {
 export interface Choice {
   id: number;
   text: string;
+  text_translations?: Record<string, string>;
   order: number;
   is_correct?: boolean;
 }
@@ -45,6 +46,7 @@ export interface Choice {
 export interface Question {
   id: number;
   text: string;
+  text_translations?: Record<string, string>;
   category: number;
   category_name: string;
   subcategory?: number | null;

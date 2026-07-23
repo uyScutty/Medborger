@@ -2,6 +2,7 @@
 
 import { clsx } from "clsx";
 import type { Choice } from "@/types";
+import { useLanguage } from "@/lib/language/context";
 
 type ChoiceState = "idle" | "selected" | "correct" | "incorrect" | "revealed-correct";
 
@@ -16,6 +17,9 @@ interface ChoiceButtonProps {
 const labels = ["A", "B", "C", "D"];
 
 export function ChoiceButton({ choice, state, index, onClick, disabled }: ChoiceButtonProps) {
+  const { secondLang, langInfo } = useLanguage();
+  const translation = secondLang && secondLang !== "da" ? choice.text_translations?.[secondLang] : undefined;
+
   return (
     <button
       onClick={onClick}
@@ -47,7 +51,17 @@ export function ChoiceButton({ choice, state, index, onClick, disabled }: Choice
       >
         {labels[index] ?? index + 1}
       </span>
-      <span className="text-sm text-gray-800 leading-relaxed">{choice.text}</span>
+      <span className="flex flex-col gap-0.5">
+        <span className="text-sm text-gray-800 leading-relaxed">{choice.text}</span>
+        {translation && (
+          <span
+            className="text-xs text-gray-500 leading-relaxed"
+            dir={langInfo?.rtl ? "rtl" : "ltr"}
+          >
+            {translation}
+          </span>
+        )}
+      </span>
     </button>
   );
 }

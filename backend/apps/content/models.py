@@ -44,6 +44,7 @@ class Question(models.Model):
         RETIRED = "retired", "Udgået"
 
     text = models.TextField()
+    text_translations = models.JSONField(default=dict, blank=True)
     category = models.ForeignKey(Category, on_delete=models.PROTECT, related_name="questions")
     subcategory = models.ForeignKey(
         Subcategory, null=True, blank=True, on_delete=models.SET_NULL, related_name="questions"
@@ -72,6 +73,7 @@ class Question(models.Model):
 class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE, related_name="choices")
     text = models.CharField(max_length=500)
+    text_translations = models.JSONField(default=dict, blank=True)
     is_correct = models.BooleanField(default=False)
     order = models.PositiveSmallIntegerField(default=0)
     option_letter = models.CharField(max_length=1, blank=True)

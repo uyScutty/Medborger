@@ -77,7 +77,18 @@ export function QuestionCard({ question, questionNumber, totalQuestions, onAnswe
         )}
       </div>
 
-      <p className="text-lg font-medium text-gray-900 leading-relaxed">{question.text}</p>
+      {/* Question text */}
+      <div>
+        <p className="text-lg font-medium text-gray-900 leading-relaxed">{question.text}</p>
+        {secondLang && secondLang !== "da" && question.text_translations?.[secondLang] && (
+          <p
+            className="mt-1 text-sm text-gray-500 leading-relaxed"
+            dir={langInfo?.rtl ? "rtl" : "ltr"}
+          >
+            {question.text_translations[secondLang]}
+          </p>
+        )}
+      </div>
 
       <div className="space-y-3">
         {question.choices.map((choice, i) => (

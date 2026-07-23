@@ -183,6 +183,7 @@ class Command(BaseCommand):
             difficulty=item.get("difficulty", Question.Difficulty.MEDIUM),
             is_free=item.get("is_free", False),
             status=status,
+            text_translations=item.get("question_text_translations", {}),
             explanation=explanation_text,
             explanation_sentences=explanation_sentences,
             correct_answer_summary=item.get("correct_answer_summary", {}),
@@ -212,6 +213,7 @@ class Command(BaseCommand):
                 Choice.objects.create(
                     question=question,
                     text=opt["text"],
+                    text_translations=opt.get("text_translations", {}),
                     is_correct=(letter == correct_letter),
                     order=order,
                     option_letter=letter,
