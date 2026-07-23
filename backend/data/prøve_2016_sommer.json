@@ -1,427 +1,508 @@
 [
   {
     "question_id": "2016_s_01",
-    "test_info": { "year": 2016, "season": "sommer", "number": 1 },
+    "test_info": { "year": 2016, "season": "sommer", "number": 1, "is_free": true },
     "category_id": "demokrati_retssamfund",
     "subcategory_id": "grundlov_rettigheder",
     "question_text": "I hvilket år blev den første danske grundlov vedtaget?",
+    "question_text_translations": { "ar": "في أيّ عامٍ صدر الدستور الدنماركي الأول؟" },
     "options": [
-      { "id": "A", "text": "I 1849" },
-      { "id": "B", "text": "I 1915" },
-      { "id": "C", "text": "I 1953" }
+      { "id": "A", "text": "I 1849", "text_translations": { "ar": "عام 1849" } },
+      { "id": "B", "text": "I 1915", "text_translations": { "ar": "عام 1915" } },
+      { "id": "C", "text": "I 1953", "text_translations": { "ar": "عام 1953" } }
     ],
     "correct_option_now": "A",
     "is_changed_since_2016": false,
     "historical_change_info": null,
-    "explanation": "Danmarks første grundlov blev underskrevet af Frederik 7. den 5. juni 1849.",
+    "explanation_sentences": [
+      { "da": "Danmarks første grundlov blev underskrevet af Frederik 7. den 5. juni 1849.", "ar": "وقَّع الملك فريدريك السابع على الدستور الدنماركي الأول في الخامس من يونيو 1849." }
+    ],
     "is_free": true
   },
   {
     "question_id": "2016_s_02",
-    "test_info": { "year": 2016, "season": "sommer", "number": 2 },
+    "test_info": { "year": 2016, "season": "sommer", "number": 2, "is_free": true },
     "category_id": "hverdagsliv_arbejdsmarked",
     "subcategory_id": "arbejdsmarked",
     "question_text": "Hvad dækker begrebet 'Den Danske Model' over på det danske arbejdsmarked?",
+    "question_text_translations": { "ar": "ما الذي يعنيه مفهوم 'النموذج الدنماركي' في سوق العمل الدنماركي؟" },
     "options": [
-      { "id": "A", "text": "At løn og arbejdsforhold primært aftales mellem arbejdsmarkedets parter" },
-      { "id": "B", "text": "At Folketinget vedtager lov om en fast mindsteløn" },
-      { "id": "C", "text": "At staten bestemmer arbejdstiden i den private sektor" }
+      { "id": "A", "text": "At løn og arbejdsforhold primært aftales mellem arbejdsmarkedets parter", "text_translations": { "ar": "أن تُحدَّد الأجور وظروف العمل بصفة رئيسية عبر التفاوض بين أطراف سوق العمل" } },
+      { "id": "B", "text": "At Folketinget vedtager lov om en fast mindsteløn", "text_translations": { "ar": "أن يُصدر البرلمان قانوناً بحد أدنى ثابت للأجور" } },
+      { "id": "C", "text": "At staten bestemmer arbejdstiden i den private sektor", "text_translations": { "ar": "أن تحدد الدولة ساعات العمل في القطاع الخاص" } }
     ],
     "correct_option_now": "A",
     "is_changed_since_2016": false,
     "historical_change_info": null,
-    "explanation": "Den danske model bygger på frivillige aftaler (overenskomster) mellem fagforeninger og arbejdsgiverforeninger.",
+    "explanation_sentences": [
+      { "da": "Den danske model bygger på frivillige aftaler (overenskomster) mellem fagforeninger og arbejdsgiverforeninger.", "ar": "يقوم النموذج الدنماركي على الاتفاقيات الطوعية (العقود الجماعية) بين النقابات العمالية واتحادات أصحاب العمل." }
+    ],
     "is_free": true
   },
   {
     "question_id": "2016_s_03",
-    "test_info": { "year": 2016, "season": "sommer", "number": 3 },
+    "test_info": { "year": 2016, "season": "sommer", "number": 3, "is_free": true },
     "category_id": "demokrati_retssamfund",
     "subcategory_id": "folketing_regering",
     "question_text": "Hvor mange medlemmer er der i alt i Folketinget?",
+    "question_text_translations": { "ar": "كم يبلغ إجمالي أعضاء البرلمان الدنماركي (الفولكتينغ)؟" },
     "options": [
-      { "id": "A", "text": "175 medlemmer" },
-      { "id": "B", "text": "179 medlemmer" },
-      { "id": "C", "text": "183 medlemmer" }
+      { "id": "A", "text": "175 medlemmer", "text_translations": { "ar": "175 عضواً" } },
+      { "id": "B", "text": "179 medlemmer", "text_translations": { "ar": "179 عضواً" } },
+      { "id": "C", "text": "183 medlemmer", "text_translations": { "ar": "183 عضواً" } }
     ],
     "correct_option_now": "B",
     "is_changed_since_2016": false,
     "historical_change_info": null,
-    "explanation": "Folketinget har 179 medlemmer (175 fra Danmark, 2 fra Færøerne og 2 fra Grønland).",
+    "explanation_sentences": [
+      { "da": "Folketinget har 179 medlemmer (175 fra Danmark, 2 fra Færøerne og 2 fra Grønland).", "ar": "يضم الفولكتينغ 179 عضواً (175 من الدنمارك، و2 من جزر فارو، و2 من غرينلاند)." }
+    ],
     "is_free": true
   },
   {
     "question_id": "2016_s_04",
-    "test_info": { "year": 2016, "season": "sommer", "number": 4 },
+    "test_info": { "year": 2016, "season": "sommer", "number": 4, "is_free": true },
     "category_id": "hverdagsliv_arbejdsmarked",
     "subcategory_id": "ligestilling_familie",
     "question_text": "Hvad er den generelle grænse for fri abort i Danmark uden særlig tilladelse?",
+    "question_text_translations": { "ar": "ما الحد الزمني العام للإجهاض المجاني في الدنمارك دون إذن خاص؟" },
     "options": [
-      { "id": "A", "text": "12. graviditetsuge" },
-      { "id": "B", "text": "18. graviditetsuge" },
-      { "id": "C", "text": "24. graviditetsuge" }
+      { "id": "A", "text": "12. graviditetsuge", "text_translations": { "ar": "الأسبوع الثاني عشر من الحمل" } },
+      { "id": "B", "text": "18. graviditetsuge", "text_translations": { "ar": "الأسبوع الثامن عشر من الحمل" } },
+      { "id": "C", "text": "24. graviditetsuge", "text_translations": { "ar": "الأسبوع الرابع والعشرون من الحمل" } }
     ],
     "correct_option_now": "B",
     "is_changed_since_2016": true,
-    "historical_change_info": "I 2016 var svarmulighed A (12. uge) det rigtige svar. Lovgivningen blev dog senere ændret af Folketinget, så grænsen for fri abort blev hævet til 18. uge.",
-    "explanation": "Grænsen for fri abort i Danmark er i dag udgangen af 18. graviditetsuge.",
+    "historical_change_info": null,
+    "explanation_sentences": [
+      { "da": "Grænsen for fri abort i Danmark er i dag udgangen af 18. graviditetsuge.", "ar": "يُحدَّد الحد الزمني للإجهاض المجاني في الدنمارك اليوم بنهاية الأسبوع الثامن عشر من الحمل." }
+    ],
+    "historical_note_sentences": [
+      { "da": "I 2016 var svarmulighed A (12. uge) det rigtige svar. Lovgivningen blev dog senere ændret af Folketinget, så grænsen for fri abort blev hævet til 18. uge.", "ar": "في عام 2016 كان الخيار (أ) — الأسبوع الثاني عشر — هو الإجابة الصحيحة. غير أن البرلمان عدَّل القانون لاحقاً ورفع الحد إلى الأسبوع الثامن عشر." }
+    ],
     "is_free": true
   },
   {
     "question_id": "2016_s_05",
-    "test_info": { "year": 2016, "season": "sommer", "number": 5 },
+    "test_info": { "year": 2016, "season": "sommer", "number": 5, "is_free": true },
     "category_id": "kultur_historie",
     "subcategory_id": "traditioner",
     "question_text": "Hvorfor fejres Grundlovsdag den 5. juni?",
+    "question_text_translations": { "ar": "لماذا يُحتفل بيوم الدستور في الخامس من يونيو؟" },
     "options": [
-      { "id": "A", "text": "Til minde om Danmarks befrielse i 1945" },
-      { "id": "B", "text": "Til minde om vedtagelsen af den første grundlov i 1849" },
-      { "id": "C", "text": "Til minde om Genforeningen i 1920" }
+      { "id": "A", "text": "Til minde om Danmarks befrielse i 1945", "text_translations": { "ar": "إحياءً لذكرى تحرير الدنمارك عام 1945" } },
+      { "id": "B", "text": "Til minde om vedtagelsen af den første grundlov i 1849", "text_translations": { "ar": "إحياءً لذكرى إصدار الدستور الأول عام 1849" } },
+      { "id": "C", "text": "Til minde om Genforeningen i 1920", "text_translations": { "ar": "إحياءً لذكرى إعادة التوحيد عام 1920" } }
     ],
     "correct_option_now": "B",
     "is_changed_since_2016": false,
     "historical_change_info": null,
-    "explanation": "Grundlovsdag markerer underskrivelsen af Danmarks første grundlov den 5. juni 1849.",
+    "explanation_sentences": [
+      { "da": "Grundlovsdag markerer underskrivelsen af Danmarks første grundlov den 5. juni 1849.", "ar": "يُحيي يوم الدستور الوطني ذكرى توقيع الدستور الدنماركي الأول في الخامس من يونيو 1849." }
+    ],
     "is_free": true
   },
   {
     "question_id": "2016_s_06",
-    "test_info": { "year": 2016, "season": "sommer", "number": 6 },
+    "test_info": { "year": 2016, "season": "sommer", "number": 6, "is_free": true },
     "category_id": "demokrati_retssamfund",
     "subcategory_id": "domstole_politi",
     "question_text": "Hvilken magt har domstolene ifølge princippet om magtens tredeling?",
+    "question_text_translations": { "ar": "ما السلطة التي تمتلكها المحاكم وفقاً لمبدأ الفصل بين السلطات؟" },
     "options": [
-      { "id": "A", "text": "Den lovgivende magt" },
-      { "id": "B", "text": "Den udøvende magt" },
-      { "id": "C", "text": "Den dømmende magt" }
+      { "id": "A", "text": "Den lovgivende magt", "text_translations": { "ar": "السلطة التشريعية" } },
+      { "id": "B", "text": "Den udøvende magt", "text_translations": { "ar": "السلطة التنفيذية" } },
+      { "id": "C", "text": "Den dømmende magt", "text_translations": { "ar": "السلطة القضائية" } }
     ],
     "correct_option_now": "C",
     "is_changed_since_2016": false,
     "historical_change_info": null,
-    "explanation": "Magtens tredeling opdeler magten i den lovgivende (Folketinget/regeringen), udøvende (regeringen/politiet) og dømmende magt (domstolene).",
+    "explanation_sentences": [
+      { "da": "Magtens tredeling opdeler magten i den lovgivende (Folketinget/regeringen), udøvende (regeringen/politiet) og dømmende magt (domstolene).", "ar": "يُقسِّم مبدأ الفصل بين السلطات الحكمَ إلى: السلطة التشريعية (البرلمان/الحكومة)، والسلطة التنفيذية (الحكومة/الشرطة)، والسلطة القضائية (المحاكم)." }
+    ],
     "is_free": true
   },
   {
     "question_id": "2016_s_07",
-    "test_info": { "year": 2016, "season": "sommer", "number": 7 },
+    "test_info": { "year": 2016, "season": "sommer", "number": 7, "is_free": true },
     "category_id": "kultur_historie",
     "subcategory_id": "historie",
     "question_text": "I hvilket århundrede blev Danmark et kristent land ifølge Jellingstenen?",
+    "question_text_translations": { "ar": "في أيّ قرنٍ اعتنقت الدنمارك المسيحية وفقاً لحجر يلينغ؟" },
     "options": [
-      { "id": "A", "text": "I det 10. århundrede (900-tallet)" },
-      { "id": "B", "text": "I det 12. århundrede (1100-tallet)" },
-      { "id": "C", "text": "I det 15. århundrede (1400-tallet)" }
+      { "id": "A", "text": "I det 10. århundrede (900-tallet)", "text_translations": { "ar": "في القرن العاشر (900-999م)" } },
+      { "id": "B", "text": "I det 12. århundrede (1100-tallet)", "text_translations": { "ar": "في القرن الثاني عشر (1100-1199م)" } },
+      { "id": "C", "text": "I det 15. århundrede (1400-tallet)", "text_translations": { "ar": "في القرن الخامس عشر (1400-1499م)" } }
     ],
     "correct_option_now": "A",
     "is_changed_since_2016": false,
     "historical_change_info": null,
-    "explanation": "Harald Blåtand rejste Jellingstenen ca. år 965 og gjorde danerne kristne.",
+    "explanation_sentences": [
+      { "da": "Harald Blåtand rejste Jellingstenen ca. år 965 og gjorde danerne kristne.", "ar": "نصب الملك هارالد بلوتوث حجر يلينغ نحو عام 965م وأدخل المسيحية إلى الدنمارك." }
+    ],
     "is_free": true
   },
   {
     "question_id": "2016_s_08",
-    "test_info": { "year": 2016, "season": "sommer", "number": 8 },
+    "test_info": { "year": 2016, "season": "sommer", "number": 8, "is_free": true },
     "category_id": "hverdagsliv_arbejdsmarked",
     "subcategory_id": "uddannelse_boern",
     "question_text": "Er der undervisningspligt eller skolepligt i Danmark?",
+    "question_text_translations": { "ar": "هل في الدنمارك إلزام بالتعليم أم إلزام بالمدرسة؟" },
     "options": [
-      { "id": "A", "text": "Der er skolepligt (alle skal gå i folkeskole)" },
-      { "id": "B", "text": "Der er undervisningspligt (børn skal modtage undervisning, men kan f.eks. hjemmeundervises)" },
-      { "id": "C", "text": "Der er hverken undervisnings- eller skolepligt" }
+      { "id": "A", "text": "Der er skolepligt (alle skal gå i folkeskole)", "text_translations": { "ar": "هناك إلزام بالمدرسة (يجب على الجميع الالتحاق بالمدرسة الحكومية)" } },
+      { "id": "B", "text": "Der er undervisningspligt (børn skal modtage undervisning, men kan f.eks. hjemmeundervises)", "text_translations": { "ar": "هناك إلزام بالتعليم (يجب أن يتلقى الأطفال تعليماً، لكن يمكن التعليم المنزلي مثلاً)" } },
+      { "id": "C", "text": "Der er hverken undervisnings- eller skolepligt", "text_translations": { "ar": "لا يوجد إلزام بالتعليم ولا بالمدرسة" } }
     ],
     "correct_option_now": "B",
     "is_changed_since_2016": false,
     "historical_change_info": null,
-    "explanation": "Danmark har undervisningspligt i 10 år, men ikke pligt til at gå i en specifik skole.",
+    "explanation_sentences": [
+      { "da": "Danmark har undervisningspligt i 10 år, men ikke pligt til at gå i en specifik skole.", "ar": "تُوجب الدنمارك التعليم لمدة 10 سنوات، لكنها لا تُلزم بالالتحاق بمدرسة بعينها." }
+    ],
     "is_free": true
   },
   {
     "question_id": "2016_s_09",
-    "test_info": { "year": 2016, "season": "sommer", "number": 9 },
+    "test_info": { "year": 2016, "season": "sommer", "number": 9, "is_free": true },
     "category_id": "demokrati_retssamfund",
     "subcategory_id": "lokaldemokrati",
     "question_text": "Hvor ofte afholdes der kommunal- og regionsvalg i Danmark?",
+    "question_text_translations": { "ar": "كم مرةً تُجرى الانتخابات البلدية والإقليمية في الدنمارك؟" },
     "options": [
-      { "id": "A", "text": "Hvert 3. år" },
-      { "id": "B", "text": "Hvert 4. år" },
-      { "id": "C", "text": "Hvert 5. år" }
+      { "id": "A", "text": "Hvert 3. år", "text_translations": { "ar": "كل 3 سنوات" } },
+      { "id": "B", "text": "Hvert 4. år", "text_translations": { "ar": "كل 4 سنوات" } },
+      { "id": "C", "text": "Hvert 5. år", "text_translations": { "ar": "كل 5 سنوات" } }
     ],
     "correct_option_now": "B",
     "is_changed_since_2016": false,
     "historical_change_info": null,
-    "explanation": "Kommunal- og regionsvalg afholdes fast hvert fjerde år den tredje tirsdag i november.",
+    "explanation_sentences": [
+      { "da": "Kommunal- og regionsvalg afholdes fast hvert fjerde år den tredje tirsdag i november.", "ar": "تُجرى الانتخابات البلدية والإقليمية بانتظام كل أربع سنوات، في الثلاثاء الثالث من نوفمبر." }
+    ],
     "is_free": true
   },
   {
     "question_id": "2016_s_10",
-    "test_info": { "year": 2016, "season": "sommer", "number": 10 },
+    "test_info": { "year": 2016, "season": "sommer", "number": 10, "is_free": true },
     "category_id": "kultur_historie",
     "subcategory_id": "kongehus_rigsfaellesskab",
     "question_text": "Hvilke tre lande udgør Rigsfællesskabet?",
+    "question_text_translations": { "ar": "ما الدول الثلاث التي تتألف منها المملكة المشتركة (ريغسفيلسكابيت)؟" },
     "options": [
-      { "id": "A", "text": "Danmark, Færøerne og Grønland" },
-      { "id": "B", "text": "Danmark, Island og Norge" },
-      { "id": "C", "text": "Danmark, Færøerne og Åland" }
+      { "id": "A", "text": "Danmark, Færøerne og Grønland", "text_translations": { "ar": "الدنمارك وجزر فارو وغرينلاند" } },
+      { "id": "B", "text": "Danmark, Island og Norge", "text_translations": { "ar": "الدنمارك وآيسلندا والنرويج" } },
+      { "id": "C", "text": "Danmark, Færøerne og Åland", "text_translations": { "ar": "الدنمارك وجزر فارو وآلاند" } }
     ],
     "correct_option_now": "A",
     "is_changed_since_2016": false,
     "historical_change_info": null,
-    "explanation": "Rigsfællesskabet består af Danmark, Færøerne og Grønland.",
+    "explanation_sentences": [
+      { "da": "Rigsfællesskabet består af Danmark, Færøerne og Grønland.", "ar": "تتكون المملكة المشتركة من الدنمارك وجزر فارو وغرينلاند." }
+    ],
     "is_free": true
   },
   {
     "question_id": "2016_s_11",
-    "test_info": { "year": 2016, "season": "sommer", "number": 11 },
+    "test_info": { "year": 2016, "season": "sommer", "number": 11, "is_free": true },
     "category_id": "hverdagsliv_arbejdsmarked",
     "subcategory_id": "sundhed_velfaerd",
     "question_text": "Hvordan finansieres det danske sundhedsvæsen primært?",
+    "question_text_translations": { "ar": "كيف يُموَّل نظام الرعاية الصحية الدنماركي بصفة رئيسية؟" },
     "options": [
-      { "id": "A", "text": "Gennem private sygeforsikringer" },
-      { "id": "B", "text": "Gennem indkomstskatter" },
-      { "id": "C", "text": "Gennem brugerbetaling ved lægebesøg" }
+      { "id": "A", "text": "Gennem private sygeforsikringer", "text_translations": { "ar": "من خلال التأمين الصحي الخاص" } },
+      { "id": "B", "text": "Gennem indkomstskatter", "text_translations": { "ar": "من خلال ضرائب الدخل" } },
+      { "id": "C", "text": "Gennem brugerbetaling ved lægebesøg", "text_translations": { "ar": "من خلال رسوم يدفعها المريض عند زيارة الطبيب" } }
     ],
     "correct_option_now": "B",
     "is_changed_since_2016": false,
     "historical_change_info": null,
-    "explanation": "Det danske sundhedsvæsen er skattefinansieret, hvilket giver fri og lige adgang til behandling.",
+    "explanation_sentences": [
+      { "da": "Det danske sundhedsvæsen er skattefinansieret, hvilket giver fri og lige adgang til behandling.", "ar": "يعتمد نظام الرعاية الصحية الدنماركي على التمويل الضريبي، مما يكفل الوصول المجاني والمتساوي للعلاج." }
+    ],
     "is_free": true
   },
   {
     "question_id": "2016_s_12",
-    "test_info": { "year": 2016, "season": "sommer", "number": 12 },
+    "test_info": { "year": 2016, "season": "sommer", "number": 12, "is_free": true },
     "category_id": "kultur_historie",
     "subcategory_id": "foreningsliv_kultur",
     "question_text": "Hvad kendetegner det danske foreningsliv?",
+    "question_text_translations": { "ar": "ما الذي يُميِّز حياة الجمعيات والأندية في الدنمارك؟" },
     "options": [
-      { "id": "A", "text": "Det er primært drevet af statslige embedsmænd" },
-      { "id": "B", "text": "Det bygger i høj grad på frivilligt arbejde og engagement" },
-      { "id": "C", "text": "Det er kun åbent for borgere over 18 år" }
+      { "id": "A", "text": "Det er primært drevet af statslige embedsmænd", "text_translations": { "ar": "تديرها بصفة رئيسية موظفون حكوميون" } },
+      { "id": "B", "text": "Det bygger i høj grad på frivilligt arbejde og engagement", "text_translations": { "ar": "تقوم إلى حد بعيد على العمل التطوعي والمشاركة الشعبية" } },
+      { "id": "C", "text": "Det er kun åbent for borgere over 18 år", "text_translations": { "ar": "لا تقبل إلا المواطنين الذين تجاوزوا 18 عاماً" } }
     ],
     "correct_option_now": "B",
     "is_changed_since_2016": false,
     "historical_change_info": null,
-    "explanation": "Foreningslivet og frivilligt arbejde er en central grundsten i det danske lokalsamfund og demokrati.",
+    "explanation_sentences": [
+      { "da": "Foreningslivet og frivilligt arbejde er en central grundsten i det danske lokalsamfund og demokrati.", "ar": "يُشكِّل العمل التطوعي والانتماء إلى الجمعيات ركيزةً أساسية في المجتمع المحلي الدنماركي والحياة الديمقراطية." }
+    ],
     "is_free": true
   },
   {
     "question_id": "2016_s_13",
-    "test_info": { "year": 2016, "season": "sommer", "number": 13 },
+    "test_info": { "year": 2016, "season": "sommer", "number": 13, "is_free": true },
     "category_id": "demokrati_retssamfund",
     "subcategory_id": "grundlov_rettigheder",
     "question_text": "Hvad betyder ytringsfrihed ifølge Grundloven?",
+    "question_text_translations": { "ar": "ما الذي تعنيه حرية التعبير وفقاً للدستور؟" },
     "options": [
-      { "id": "A", "text": "At man må sige og trykke hvad som helst uden ansvar over for domstolene" },
-      { "id": "B", "text": "At der ikke er censur, men man står til ansvar over for domstolene for det, man udtaler" },
-      { "id": "C", "text": "At staten skal godkende aviser, før de trykkes" }
+      { "id": "A", "text": "At man må sige og trykke hvad som helst uden ansvar over for domstolene", "text_translations": { "ar": "أن يحق للمرء قول أي شيء ونشره دون محاسبة قضائية" } },
+      { "id": "B", "text": "At der ikke er censur, men man står til ansvar over for domstolene for det, man udtaler", "text_translations": { "ar": "أنه لا توجد رقابة مسبقة، لكن يتحمل الشخص المسؤولية القضائية عما يُعبِّر عنه" } },
+      { "id": "C", "text": "At staten skal godkende aviser, før de trykkes", "text_translations": { "ar": "أن على الدولة الموافقة على الصحف قبل طباعتها" } }
     ],
     "correct_option_now": "B",
     "is_changed_since_2016": false,
     "historical_change_info": null,
-    "explanation": "Censur er forbudt i Danmark, men man kan efterfølgende idømmes straf ved domstolene for f.eks. bagvaskelse eller trusler.",
+    "explanation_sentences": [
+      { "da": "Censur er forbudt i Danmark, men man kan efterfølgende idømmes straf ved domstolene for f.eks. bagvaskelse eller trusler.", "ar": "تحظر الدنمارك الرقابة المسبقة، غير أنه يمكن محاكمة الشخص لاحقاً على ما أدلى به، كالتشهير أو التهديد." }
+    ],
     "is_free": true
   },
   {
     "question_id": "2016_s_14",
-    "test_info": { "year": 2016, "season": "sommer", "number": 14 },
+    "test_info": { "year": 2016, "season": "sommer", "number": 14, "is_free": true },
     "category_id": "kultur_historie",
     "subcategory_id": "historie",
     "question_text": "Hvornår fik kvinder i Danmark stemmeret til Folketinget?",
+    "question_text_translations": { "ar": "متى حصلت المرأة في الدنمارك على حق التصويت في انتخابات البرلمان؟" },
     "options": [
-      { "id": "A", "text": "I 1849" },
-      { "id": "B", "text": "I 1915" },
-      { "id": "C", "text": "I 1953" }
+      { "id": "A", "text": "I 1849", "text_translations": { "ar": "عام 1849" } },
+      { "id": "B", "text": "I 1915", "text_translations": { "ar": "عام 1915" } },
+      { "id": "C", "text": "I 1953", "text_translations": { "ar": "عام 1953" } }
     ],
     "correct_option_now": "B",
     "is_changed_since_2016": false,
     "historical_change_info": null,
-    "explanation": "Ved grundlovsændringen i 1915 opnåede kvinder og tjenestefolk stemmeret til Rigsdagen.",
+    "explanation_sentences": [
+      { "da": "Ved grundlovsændringen i 1915 opnåede kvinder og tjenestefolk stemmeret til Rigsdagen.", "ar": "بموجب تعديل الدستور عام 1915 حصلت النساء والخدم على حق التصويت في انتخابات البرلمان." }
+    ],
     "is_free": true
   },
   {
     "question_id": "2016_s_15",
-    "test_info": { "year": 2016, "season": "sommer", "number": 15 },
+    "test_info": { "year": 2016, "season": "sommer", "number": 15, "is_free": true },
     "category_id": "hverdagsliv_arbejdsmarked",
     "subcategory_id": "arbejdsmarked",
     "question_text": "Hvad er en 'overenskomst' på det danske arbejdsmarked?",
+    "question_text_translations": { "ar": "ما المقصود بـ'الاتفاقية الجماعية' (أوفيرينسكومست) في سوق العمل الدنماركي؟" },
     "options": [
-      { "id": "A", "text": "En aftale mellem en medarbejder og chefen om personlig løn" },
-      { "id": "B", "text": "En kollektiv aftale om løn og arbejdsvilkår indgået mellem fagforening og arbejdsgiverforening" },
-      { "id": "C", "text": "En lov vedtaget af Beskæftigelsesministeriet" }
+      { "id": "A", "text": "En aftale mellem en medarbejder og chefen om personlig løn", "text_translations": { "ar": "اتفاقية بين موظف ومديره تنظم راتبه الشخصي" } },
+      { "id": "B", "text": "En kollektiv aftale om løn og arbejdsvilkår indgået mellem fagforening og arbejdsgiverforening", "text_translations": { "ar": "اتفاقية جماعية بشأن الأجور وظروف العمل، تُبرَم بين النقابة العمالية واتحاد أصحاب العمل" } },
+      { "id": "C", "text": "En lov vedtaget af Beskæftigelsesministeriet", "text_translations": { "ar": "قانون تُصدره وزارة التوظيف" } }
     ],
     "correct_option_now": "B",
     "is_changed_since_2016": false,
     "historical_change_info": null,
-    "explanation": "Overenskomster fastsætter rammerne for arbejdstid, mindsteløn, pension og andre vilkår inden for et fag.",
+    "explanation_sentences": [
+      { "da": "Overenskomster fastsætter rammerne for arbejdstid, mindsteløn, pension og andre vilkår inden for et fag.", "ar": "تحدد الاتفاقيات الجماعية الإطار العام لساعات العمل والحد الأدنى للأجور والمعاش وسائر شروط العمل في كل قطاع مهني." }
+    ],
     "is_free": true
   },
   {
     "question_id": "2016_s_16",
-    "test_info": { "year": 2016, "season": "sommer", "number": 16 },
+    "test_info": { "year": 2016, "season": "sommer", "number": 16, "is_free": true },
     "category_id": "kultur_historie",
     "subcategory_id": "kongehus_rigsfaellesskab",
     "question_text": "Hvilken rolle har Monarken (Kongen/Dronningen) i det danske politiske system?",
+    "question_text_translations": { "ar": "ما الدور الذي يؤديه الملك/الملكة في النظام السياسي الدنماركي؟" },
     "options": [
-      { "id": "A", "text": "Monarken har den reelle politiske magt og kan nedlægge veto mod love" },
-      { "id": "B", "text": "Monarken har en formel og repræsentativ rolle uden politisk magt" },
-      { "id": "C", "text": "Monarken er formand for Folketinget" }
+      { "id": "A", "text": "Monarken har den reelle politiske magt og kan nedlægge veto mod love", "text_translations": { "ar": "يمتلك الملك السلطة السياسية الفعلية ويحق له نقض القوانين" } },
+      { "id": "B", "text": "Monarken har en formel og repræsentativ rolle uden politisk magt", "text_translations": { "ar": "يضطلع الملك بدور رسمي وتمثيلي دون سلطة سياسية فعلية" } },
+      { "id": "C", "text": "Monarken er formand for Folketinget", "text_translations": { "ar": "الملك رئيس البرلمان" } }
     ],
     "correct_option_now": "B",
     "is_changed_since_2016": true,
-    "historical_change_info": "Selve den konstitutionelle rolle er uændret, men regenten har skiftet status: I 2016 var Dronning Margrethe 2. regent. Efter tronskiftet i januar 2024 er Kong Frederik 10. Danmarks monark.",
-    "explanation": "Danmark er et konstitutionelt monarki, hvor monarken underskriver love sammen med en minister, men i praksis udøver ingen politisk magt.",
+    "historical_change_info": null,
+    "explanation_sentences": [
+      { "da": "Danmark er et konstitutionelt monarki, hvor monarken underskriver love sammen med en minister, men i praksis udøver ingen politisk magt.", "ar": "الدنمارك ملكية دستورية، حيث يوقع الملك القوانين مع الوزير المختص، لكنه لا يمارس في الواقع أي سلطة سياسية." }
+    ],
+    "historical_note_sentences": [
+      { "da": "Selve den konstitutionelle rolle er uændret, men regenten har skiftet: I 2016 var Dronning Margrethe 2. regent. Efter tronskiftet i januar 2024 er Kong Frederik 10. Danmarks monark.", "ar": "الدور الدستوري لم يتغير، لكن الحاكم تبدَّل: في عام 2016 كانت الملكة مارغريت الثانية على العرش، وبعد التنازل عن العرش في يناير 2024 أصبح الملك فريدريك العاشر ملكاً للدنمارك." }
+    ],
     "is_free": true
   },
   {
     "question_id": "2016_s_17",
-    "test_info": { "year": 2016, "season": "sommer", "number": 17 },
+    "test_info": { "year": 2016, "season": "sommer", "number": 17, "is_free": true },
     "category_id": "demokrati_retssamfund",
     "subcategory_id": "folketing_regering",
     "question_text": "Hvad kræves der for, at et lovforslag bliver til gældende lov i Danmark?",
+    "question_text_translations": { "ar": "ما الذي يلزم لكي يُصبح مشروع القانون نافذاً في الدنمارك؟" },
     "options": [
-      { "id": "A", "text": "Det skal behandles 3 gange i Folketinget og vedtages, hvorefter det stadfæstes af monarken og ministeren" },
-      { "id": "B", "text": "Det skal sendes til folkeafstemning hver gang" },
-      { "id": "C", "text": "Det skal godkendes af Højesteret" }
+      { "id": "A", "text": "Det skal behandles 3 gange i Folketinget og vedtages, hvorefter det stadfæstes af monarken og ministeren", "text_translations": { "ar": "يُناقَش ثلاث مرات في البرلمان ثم يُصوَّت عليه، وبعدها يُوقِّع عليه الملك والوزير المختص" } },
+      { "id": "B", "text": "Det skal sendes til folkeafstemning hver gang", "text_translations": { "ar": "يُعرَض على استفتاء شعبي في كل مرة" } },
+      { "id": "C", "text": "Det skal godkendes af Højesteret", "text_translations": { "ar": "يجب أن تُوافق عليه المحكمة العليا" } }
     ],
     "correct_option_now": "A",
     "is_changed_since_2016": false,
     "historical_change_info": null,
-    "explanation": "Lovforslag gennemgår tre behandlinger i Folketingssalen, før de stemmes om og underskrives.",
+    "explanation_sentences": [
+      { "da": "Lovforslag gennemgår tre behandlinger i Folketingssalen, før de stemmes om og underskrives.", "ar": "تمر مشاريع القوانين بثلاث قراءات في قاعة البرلمان قبل التصويت عليها وتوقيعها." }
+    ],
     "is_free": true
   },
   {
     "question_id": "2016_s_18",
-    "test_info": { "year": 2016, "season": "sommer", "number": 18 },
+    "test_info": { "year": 2016, "season": "sommer", "number": 18, "is_free": true },
     "category_id": "hverdagsliv_arbejdsmarked",
     "subcategory_id": "ligestilling_familie",
     "question_text": "Hvilket princip gælder ved opdragelse af børn i Danmark ifølge lovgivningen?",
+    "question_text_translations": { "ar": "ما المبدأ القانوني الذي يُحكم تربية الأطفال في الدنمارك؟" },
     "options": [
-      { "id": "A", "text": "Forældre har ret til at bruge mild korporlig afstraffelse (genstande/lussinger)" },
-      { "id": "B", "text": "Børn har ret til beskyttelse mod vold, og genstande/afstraffelse er helt forbudt ved lov" },
-      { "id": "C", "text": "Det er op til de enkelte kommuner at bestemme reglerne for afstraffelse" }
+      { "id": "A", "text": "Forældre har ret til at bruge mild korporlig afstraffelse (genstande/lussinger)", "text_translations": { "ar": "يحق للوالدين استخدام عقوبة بدنية خفيفة (بالأدوات/الصفع)" } },
+      { "id": "B", "text": "Børn har ret til beskyttelse mod vold, og genstande/afstraffelse er helt forbudt ved lov", "text_translations": { "ar": "للأطفال حق الحماية من العنف، وأي عقوبة بدنية محظورة قانوناً" } },
+      { "id": "C", "text": "Det er op til de enkelte kommuner at bestemme reglerne for afstraffelse", "text_translations": { "ar": "يعود للبلديات الفردية تحديد قواعد العقوبة" } }
     ],
     "correct_option_now": "B",
     "is_changed_since_2016": false,
     "historical_change_info": null,
-    "explanation": "Revselsesretten blev afskaffet i Danmark i 1997, hvormed enhver form for fysisk afstraffelse af børn blev ulovlig.",
+    "explanation_sentences": [
+      { "da": "Revselsesretten blev afskaffet i Danmark i 1997, hvormed enhver form for fysisk afstraffelse af børn blev ulovlig.", "ar": "أُلغيَ حق التأديب البدني في الدنمارك عام 1997، وأصبح كل شكل من أشكال العقوبة الجسدية للأطفال مخالفاً للقانون." }
+    ],
     "is_free": true
   },
   {
     "question_id": "2016_s_19",
-    "test_info": { "year": 2016, "season": "sommer", "number": 19 },
+    "test_info": { "year": 2016, "season": "sommer", "number": 19, "is_free": true },
     "category_id": "kultur_historie",
     "subcategory_id": "historie",
     "question_text": "Hvilken begivenhed skete i Danmark den 9. april 1940?",
+    "question_text_translations": { "ar": "ما الحدث الذي وقع في الدنمارك في التاسع من أبريل 1940؟" },
     "options": [
-      { "id": "A", "text": "Danmark blev befriets af de allierede styrker" },
-      { "id": "B", "text": "Tyskland besatte Danmark under 2. verdenskrig" },
-      { "id": "C", "text": "Danmark stemte ja til optagelse i EF/EU" }
+      { "id": "A", "text": "Danmark blev befriets af de allierede styrker", "text_translations": { "ar": "تحررت الدنمارك على يد قوات الحلفاء" } },
+      { "id": "B", "text": "Tyskland besatte Danmark under 2. verdenskrig", "text_translations": { "ar": "احتلت ألمانيا الدنمارك إبان الحرب العالمية الثانية" } },
+      { "id": "C", "text": "Danmark stemte ja til optagelse i EF/EU", "text_translations": { "ar": "صوَّتت الدنمارك بنعم للانضمام إلى المجموعة الأوروبية/الاتحاد الأوروبي" } }
     ],
     "correct_option_now": "B",
     "is_changed_since_2016": false,
     "historical_change_info": null,
-    "explanation": "Den 9. april 1940 blev Danmark angrebet og besat af nazistiske tyske tropper.",
+    "explanation_sentences": [
+      { "da": "Den 9. april 1940 blev Danmark angrebet og besat af nazistiske tyske tropper.", "ar": "في التاسع من أبريل 1940 هاجمت قوات ألمانيا النازية الدنمارك واحتلتها." }
+    ],
     "is_free": true
   },
   {
     "question_id": "2016_s_20",
-    "test_info": { "year": 2016, "season": "sommer", "number": 20 },
+    "test_info": { "year": 2016, "season": "sommer", "number": 20, "is_free": true },
     "category_id": "hverdagsliv_arbejdsmarked",
     "subcategory_id": "uddannelse_boern",
     "question_text": "Hvad er SU (Statens Uddannelsesstøtte)?",
+    "question_text_translations": { "ar": "ما هو 'السو' (SU) — دعم الدولة للتعليم؟" },
     "options": [
-      { "id": "A", "text": "Et lån, som alle studerende skal betale fuldt tilbage" },
-      { "id": "B", "text": "En økonomisk støtte (stipendium/lån), som staten giver til studerende fra 18 år" },
-      { "id": "C", "text": "En støtte, der kun gives til private uddannelser" }
+      { "id": "A", "text": "Et lån, som alle studerende skal betale fuldt tilbage", "text_translations": { "ar": "قرض يجب على جميع الطلاب سداده كاملاً" } },
+      { "id": "B", "text": "En økonomisk støtte (stipendium/lån), som staten giver til studerende fra 18 år", "text_translations": { "ar": "دعم مالي (منحة/قرض) تمنحه الدولة للطلاب من سن 18 عاماً" } },
+      { "id": "C", "text": "En støtte, der kun gives til private uddannelser", "text_translations": { "ar": "دعم يُمنح فقط للتعليم الخاص" } }
     ],
     "correct_option_now": "B",
     "is_changed_since_2016": false,
     "historical_change_info": null,
-    "explanation": "SU sikrer, at uddannelse i Danmark er økonomisk tilgængelig for alle uanset social baggrund.",
+    "explanation_sentences": [
+      { "da": "SU sikrer, at uddannelse i Danmark er økonomisk tilgængelig for alle uanset social baggrund.", "ar": "يضمن نظام SU أن التعليم في الدنمارك متاح مالياً للجميع بصرف النظر عن خلفيتهم الاجتماعية." }
+    ],
     "is_free": true
   },
   {
     "question_id": "2016_s_21",
-    "test_info": { "year": 2016, "season": "sommer", "number": 21 },
+    "test_info": { "year": 2016, "season": "sommer", "number": 21, "is_free": true },
     "category_id": "demokrati_retssamfund",
     "subcategory_id": "lokaldemokrati",
     "question_text": "Hvad er kommunernes primære ansvarsområde i Danmark?",
+    "question_text_translations": { "ar": "ما المجالات التي تتحمل البلديات المسؤولية الرئيسية عنها في الدنمارك؟" },
     "options": [
-      { "id": "A", "text": "Sygehuse og regional udvikling" },
-      { "id": "B", "text": "Folkeskoler, daginstitutioner, ældrepleje og lokale veje" },
-      { "id": "C", "text": "Politi, forsvar og udenrigspolitik" }
+      { "id": "A", "text": "Sygehuse og regional udvikling", "text_translations": { "ar": "المستشفيات والتنمية الإقليمية" } },
+      { "id": "B", "text": "Folkeskoler, daginstitutioner, ældrepleje og lokale veje", "text_translations": { "ar": "المدارس الحكومية ودور الحضانة ورعاية المسنين والطرق المحلية" } },
+      { "id": "C", "text": "Politi, forsvar og udenrigspolitik", "text_translations": { "ar": "الشرطة والدفاع والسياسة الخارجية" } }
     ],
     "correct_option_now": "B",
     "is_changed_since_2016": false,
     "historical_change_info": null,
-    "explanation": "Kommunerne varetager de nære borgerrettede velfærdsopgaver, mens regionerne driver sygehusene.",
+    "explanation_sentences": [
+      { "da": "Kommunerne varetager de nære borgerrettede velfærdsopgaver, mens regionerne driver sygehusene.", "ar": "تتولى البلديات مهام الرفاه المجتمعي القريبة من المواطنين، بينما تُدير الأقاليم المستشفيات." }
+    ],
     "is_free": true
   },
   {
     "question_id": "2016_s_22",
-    "test_info": { "year": 2016, "season": "sommer", "number": 22 },
+    "test_info": { "year": 2016, "season": "sommer", "number": 22, "is_free": true },
     "category_id": "kultur_historie",
     "subcategory_id": "traditioner",
     "question_text": "Hvad fejres den 5. maj i Danmark?",
+    "question_text_translations": { "ar": "ما الذي يُحتفل به في الخامس من مايو في الدنمارك؟" },
     "options": [
-      { "id": "A", "text": "Grundlovsdag" },
-      { "id": "B", "text": "Danmarks Befrielse i 1945" },
-      { "id": "C", "text": "Valdemarsdag" }
+      { "id": "A", "text": "Grundlovsdag", "text_translations": { "ar": "يوم الدستور" } },
+      { "id": "B", "text": "Danmarks Befrielse i 1945", "text_translations": { "ar": "تحرير الدنمارك عام 1945" } },
+      { "id": "C", "text": "Valdemarsdag", "text_translations": { "ar": "يوم فالديمار" } }
     ],
     "correct_option_now": "B",
     "is_changed_since_2016": false,
     "historical_change_info": null,
-    "explanation": "Den 5. maj markerer Danmarks befrielse efter den tyske besættelse under 2. verdenskrig.",
+    "explanation_sentences": [
+      { "da": "Den 5. maj markerer Danmarks befrielse efter den tyske besættelse under 2. verdenskrig.", "ar": "يُحيي الخامس من مايو ذكرى تحرير الدنمارك من الاحتلال الألماني إبان الحرب العالمية الثانية." }
+    ],
     "is_free": true
   },
   {
     "question_id": "2016_s_23",
-    "test_info": { "year": 2016, "season": "sommer", "number": 23 },
+    "test_info": { "year": 2016, "season": "sommer", "number": 23, "is_free": true },
     "category_id": "demokrati_retssamfund",
     "subcategory_id": "domstole_politi",
     "question_text": "Hvad gælder for retsmøder og retssager i Danmark som udgangspunkt?",
+    "question_text_translations": { "ar": "ما القاعدة العامة المعمول بها في المحاكم والجلسات القضائية في الدنمارك؟" },
     "options": [
-      { "id": "A", "text": "De er altid lukkede for offentligheden" },
-      { "id": "B", "text": "De er offentlige, så enhver som udgangspunkt kan overvære dem" },
-      { "id": "C", "text": "Kun dommere og advokater må være til stede" }
+      { "id": "A", "text": "De er altid lukkede for offentligheden", "text_translations": { "ar": "مغلقة دائماً أمام العموم" } },
+      { "id": "B", "text": "De er offentlige, så enhver som udgangspunkt kan overvære dem", "text_translations": { "ar": "علنية بحيث يحق لأي شخص حضورها من حيث المبدأ" } },
+      { "id": "C", "text": "Kun dommere og advokater må være til stede", "text_translations": { "ar": "لا يُسمح بالحضور إلا للقضاة والمحامين" } }
     ],
     "correct_option_now": "B",
     "is_changed_since_2016": false,
     "historical_change_info": null,
-    "explanation": "Offentlighed i retsplejen er et grundlæggende princip i det danske retssamfund.",
+    "explanation_sentences": [
+      { "da": "Offentlighed i retsplejen er et grundlæggende princip i det danske retssamfund.", "ar": "العلنية في الإجراءات القضائية مبدأ أساسي في دولة القانون الدنماركية." }
+    ],
     "is_free": true
   },
   {
     "question_id": "2016_s_24",
-    "test_info": { "year": 2016, "season": "sommer", "number": 24 },
+    "test_info": { "year": 2016, "season": "sommer", "number": 24, "is_free": true },
     "category_id": "hverdagsliv_arbejdsmarked",
     "subcategory_id": "sundhed_velfaerd",
     "question_text": "Hvem har ret til at få tildelt en praktiserende læge (egen læge) i Danmark?",
+    "question_text_translations": { "ar": "من له حق الحصول على طبيب عام (طبيب خاص) في الدنمارك؟" },
     "options": [
-      { "id": "A", "text": "Kun folk, der er i fuldtidsbeskæftigelse" },
-      { "id": "B", "text": "Alle personer med bopæl i Danmark og et CPR-nummer" },
-      { "id": "C", "text": "Kun personer over 65 år" }
+      { "id": "A", "text": "Kun folk, der er i fuldtidsbeskæftigelse", "text_translations": { "ar": "فقط من يعملون بدوام كامل" } },
+      { "id": "B", "text": "Alle personer med bopæl i Danmark og et CPR-nummer", "text_translations": { "ar": "جميع المقيمين في الدنمارك الحاملين لرقم CPR" } },
+      { "id": "C", "text": "Kun personer over 65 år", "text_translations": { "ar": "فقط من تجاوزوا سن 65 عاماً" } }
     ],
     "correct_option_now": "B",
     "is_changed_since_2016": false,
     "historical_change_info": null,
-    "explanation": "Enhver med bopæl i Danmark har ret til sygesikring og tilknytning til en praktiserende læge.",
+    "explanation_sentences": [
+      { "da": "Enhver med bopæl i Danmark har ret til sygesikring og tilknytning til en praktiserende læge.", "ar": "لكل مقيم في الدنمارك الحق في التأمين الصحي والتسجيل لدى طبيب عام." }
+    ],
     "is_free": true
   },
   {
     "question_id": "2016_s_25",
-    "test_info": { "year": 2016, "season": "sommer", "number": 25 },
+    "test_info": { "year": 2016, "season": "sommer", "number": 25, "is_free": true },
     "category_id": "kultur_historie",
     "subcategory_id": "historie",
     "question_text": "I hvilket år blev Danmark medlem af EF (det nuværende EU)?",
+    "question_text_translations": { "ar": "في أي عام انضمت الدنمارك إلى المجموعة الأوروبية (الاتحاد الأوروبي حالياً)؟" },
     "options": [
-      { "id": "A", "text": "I 1973" },
-      { "id": "B", "text": "I 1989" },
-      { "id": "C", "text": "I 1992" }
+      { "id": "A", "text": "I 1973", "text_translations": { "ar": "عام 1973" } },
+      { "id": "B", "text": "I 1989", "text_translations": { "ar": "عام 1989" } },
+      { "id": "C", "text": "I 1992", "text_translations": { "ar": "عام 1992" } }
     ],
     "correct_option_now": "A",
     "is_changed_since_2016": false,
     "historical_change_info": null,
-    "explanation": "Efter en folkeafstemning i 1972 blev Danmark officielt medlem af EF den 1. januar 1973.",
+    "explanation_sentences": [
+      { "da": "Efter en folkeafstemning i 1972 blev Danmark officielt medlem af EF den 1. januar 1973.", "ar": "بعد استفتاء شعبي عام 1972 انضمت الدنمارك رسمياً إلى المجموعة الأوروبية في الأول من يناير 1973." }
+    ],
     "is_free": true
   }
 ]

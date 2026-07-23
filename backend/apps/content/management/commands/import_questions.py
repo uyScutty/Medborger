@@ -227,13 +227,18 @@ class Command(BaseCommand):
             month = SEASON_TO_MONTH.get(season)
             if year and month:
                 month_name = SEASON_MONTH_NAME.get(season, "")
-                exam, _ = OfficialExam.objects.get_or_create(
+                exam_is_free = test_info.get("is_free", False)
+                exam, created = OfficialExam.objects.get_or_create(
                     year=year, month=month,
                     defaults={
                         "title": f"Indfødsretsprøven {month_name} {year}",
                         "season": season,
+                        "is_free": exam_is_free,
                     },
                 )
+                if not created and exam_is_free and not exam.is_free:
+                    exam.is_free = True
+                    exam.save(update_fields=["is_free"])
                 number = test_info.get("number", 0)
                 OfficialExamQuestion.objects.get_or_create(
                     exam=exam, question=question,
