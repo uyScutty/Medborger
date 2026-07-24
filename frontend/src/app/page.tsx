@@ -4,14 +4,14 @@ import Link from "next/link";
 
 const features = [
   {
-    icon: "📝",
-    title: "Øvelsesopgaver",
-    description: "Træn med hundredvis af spørgsmål fra alle kategorier. Få forklaringer til hvert svar, så du forstår — ikke bare husker.",
+    icon: "📋",
+    title: "Tidligere officielle prøver",
+    description: "Løs alle tidligere indfødsretsprøver under realistiske betingelser med tidtagning og officiel bedømmelse.",
   },
   {
-    icon: "📋",
-    title: "Tidligere prøver",
-    description: "Løs alle tidligere officielle indfødsretsprøver under realistiske betingelser med tidtagning og bedømmelse.",
+    icon: "🌍",
+    title: "To sprog side om side",
+    description: "Vælg dit modersmål — spørgsmål og forklaringer vises på dansk og dit valgte sprog samtidig.",
   },
   {
     icon: "📊",
@@ -19,9 +19,9 @@ const features = [
     description: "Se dine stærke og svage kategorier på ét overblik, og fokusér din studietid der, hvor det tæller.",
   },
   {
-    icon: "⏱️",
-    title: "Prøveeksamen",
-    description: "Simulér den rigtige prøve: 40 spørgsmål, 45 minutter, og bestå med mindst 32 rigtige.",
+    icon: "✏️",
+    title: "Yderligere spørgsmål",
+    description: "Lav din egen tilpassede øvelse med valgfrie kategorier og antal spørgsmål. Kun for Premium-brugere.",
   },
 ];
 
@@ -111,7 +111,7 @@ export default function LandingPage() {
                 <p className="mt-1 text-sm text-gray-400">for evigt</p>
               </div>
               <ul className="space-y-2 text-sm text-gray-600">
-                {["10 øvelsesopgaver pr. dag", "1 tidligere officiel prøve", "Grundlæggende statistik"].map((item) => (
+                {["Adgang til 1 tidligere officiel prøve", "Grundlæggende statistik", "Tosproglig visning (8 sprog)"].map((item) => (
                   <li key={item} className="flex items-center gap-2">
                     <span className="text-green-500">✓</span> {item}
                   </li>
@@ -134,12 +134,12 @@ export default function LandingPage() {
               </div>
               <ul className="space-y-2 text-sm text-gray-600">
                 {[
-                  "Ubegrænset øvelse med alle spørgsmål",
-                  "Alle tidligere prøver",
-                  "Detaljerede forklaringer",
-                  "Tidstagning og prøveeksamen",
+                  "Alle tidligere officielle prøver",
+                  "Yderligere spørgsmål — vælg selv kategorier",
+                  "Detaljerede forklaringer på dit sprog",
+                  "Tidstagning og officiel prøveform",
                   "Fremskridtsanalyse per kategori",
-                  "Personlige anbefalinger",
+                  "Tosproglig visning (8 sprog)",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-2">
                     <span className="text-brand-red">✓</span> {item}
