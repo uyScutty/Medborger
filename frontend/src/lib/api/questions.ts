@@ -2,7 +2,10 @@ import type { Category, OfficialExam, Question } from "@/types";
 import { api } from "./client";
 
 export const questionsApi = {
-  categories: () => api.get<Category[]>("/content/categories/"),
+  categories: () =>
+    api.get<{ results: Category[] } | Category[]>("/content/categories/").then((r) =>
+      Array.isArray(r) ? r : r.results
+    ),
 
   list: (params?: { category__slug?: string; difficulty?: string }) => {
     const qs = params ? "?" + new URLSearchParams(params as Record<string, string>).toString() : "";
