@@ -39,28 +39,21 @@ export default function DashboardPage() {
       </div>
 
       {/* Quick actions */}
-      <div className="mb-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mb-8 grid gap-4 sm:grid-cols-2">
         <QuickAction
-          icon="📝"
-          title="Start øvelse"
-          description="Træn med tilfældige spørgsmål fra din valgte kategori"
-          href="/practice"
-          cta="Øv nu"
-        />
-        <QuickAction
-          icon="⏱️"
-          title="Prøveeksamen"
-          description="40 spørgsmål · 45 minutter · Realistiske betingelser"
-          href="/practice?mode=mock_exam"
-          cta="Start eksamen"
+          icon="📋"
+          title="Tag en officiel prøve"
+          description="Løs tidligere indfødsretsprøver under realistiske betingelser med timer og bedømmelse"
+          href="/exams"
+          cta="Gå til prøver"
           highlight
         />
         <QuickAction
-          icon="📋"
-          title="Tidligere prøver"
-          description="Løs alle officielle indfødsretsprøver"
+          icon="✏️"
+          title="Yderligere spørgsmål"
+          description="Lav din egen tilpassede øvelse — vælg kategorier og antal spørgsmål"
           href="/exams"
-          cta="Se prøver"
+          cta={user.is_premium ? "Start øvelse" : "Lås op med Premium"}
           locked={!user.is_premium}
         />
       </div>
