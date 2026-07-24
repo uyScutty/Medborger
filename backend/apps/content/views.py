@@ -6,10 +6,11 @@ from rest_framework import filters, generics, permissions
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from .models import Category, OfficialExam, Question
+from .models import Category, FactSheet, OfficialExam, Question
 from .permissions import IsPremiumOrFreeContent
 from .serializers import (
     CategorySerializer,
+    FactSheetSerializer,
     OfficialExamDetailSerializer,
     OfficialExamListSerializer,
     QuestionSerializer,
@@ -77,3 +78,24 @@ class OfficialExamDetailView(generics.RetrieveAPIView):
 
     def get_queryset(self):
         return OfficialExam.objects.filter(is_published=True).prefetch_related("questions__choices")
+
+
+class FactSheetListView(generics.ListAPIView):
+    serializer_class = FactSheetSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    pagination_class = None
+
+    def get_queryset(self):
+        qs = FactSheet.objects.select_related("category", "subcategory").order_by("order", "number")
+        if not self.request.user.is_premium:
+            qs = qs.filter(is_premium=False)
+        return qs
+
+
+class FactSheetDetailView(generics.RetrieveAPIView):
+    serializer_class = FactSheetSerializer
+    permission_classes = [permissions.IsAuthenticated, IsPremiumOrFreeContent]
+    lookup_field = "factsheet_id"
+
+    def get_queryset(self):
+        return FactSheet.objects.select_related("category", "subcategory")

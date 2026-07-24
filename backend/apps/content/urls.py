@@ -8,4 +8,6 @@ urlpatterns = [
     path("questions/<int:pk>/", views.QuestionDetailView.as_view(), name="question-detail"),
     path("exams/", views.OfficialExamListView.as_view(), name="exam-list"),
     path("exams/<int:pk>/", views.OfficialExamDetailView.as_view(), name="exam-detail"),
+    path("factsheets/", views.FactSheetListView.as_view(), name="factsheet-list"),
+    path("factsheets/<slug:factsheet_id>/", views.FactSheetDetailView.as_view(), name="factsheet-detail"),
 ]

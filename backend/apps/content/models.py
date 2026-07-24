@@ -108,6 +108,30 @@ class OfficialExam(models.Model):
         return self.title
 
 
+class FactSheet(models.Model):
+    factsheet_id = models.SlugField(unique=True, help_text="e.g. faktaark_04")
+    number = models.PositiveSmallIntegerField()
+    category = models.ForeignKey(Category, on_delete=models.PROTECT, related_name="factsheets")
+    subcategory = models.ForeignKey(
+        Subcategory, null=True, blank=True, on_delete=models.SET_NULL, related_name="factsheets"
+    )
+    # {"da": "Folketinget og Regeringen", "ar": "...", "en": "...", "tr": "...", "uk": "..."}
+    title = models.JSONField(default=dict)
+    # {"da": "# Folketinget...", "ar": "...", ...}
+    content_markdown = models.JSONField(default=dict)
+    # {"da": "https://.../da/factsheet_04.mp3", "ar": "...", ...}
+    audio_urls = models.JSONField(default=dict, blank=True)
+    is_premium = models.BooleanField(default=True)
+    order = models.PositiveSmallIntegerField(default=0)
+
+    class Meta:
+        db_table = "content_factsheet"
+        ordering = ["order", "number"]
+
+    def __str__(self) -> str:
+        return self.title.get("da", self.factsheet_id)
+
+
 class OfficialExamQuestion(models.Model):
     exam = models.ForeignKey(OfficialExam, on_delete=models.CASCADE)
     question = models.ForeignKey(Question, on_delete=models.PROTECT)

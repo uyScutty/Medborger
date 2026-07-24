@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Category, Choice, OfficialExam, OfficialExamQuestion, Question, Subcategory
+from .models import Category, Choice, FactSheet, OfficialExam, OfficialExamQuestion, Question, Subcategory
 
 
 class SubcategorySerializer(serializers.ModelSerializer):
@@ -65,6 +65,15 @@ class OfficialExamListSerializer(serializers.ModelSerializer):
             "id", "title", "year", "month", "season",
             "description", "pass_score", "total_time_minutes",
             "is_free", "question_count",
+        )
+
+
+class FactSheetSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = FactSheet
+        fields = (
+            "id", "factsheet_id", "number", "category", "subcategory",
+            "title", "content_markdown", "audio_urls", "is_premium", "order",
         )
 
 
