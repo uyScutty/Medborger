@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import type { BilingualSentence, Choice, Question } from "@/types";
+import type { BilingualSentence, Choice, FactSheetStub, Question } from "@/types";
 import { useLanguage } from "@/lib/language/context";
 import { Card } from "../ui/Card";
 import { Badge } from "../ui/Badge";
@@ -131,6 +131,11 @@ export function QuestionCard({ question, questionNumber, totalQuestions, onAnswe
             </div>
           )}
 
+          {/* Faktaark-knap — kun ved forkert svar */}
+          {!result?.is_correct && resultQuestion.factsheet && (
+            <FactSheetLink factsheet={resultQuestion.factsheet} secondLang={secondLang} langInfo={langInfo} />
+          )}
+
           {resultQuestion.status === "updated" &&
             resultQuestion.historical_note_sentences &&
             resultQuestion.historical_note_sentences.length > 0 && (
@@ -179,6 +184,56 @@ function BilingualLine({
           {translation}
         </p>
       )}
+    </div>
+  );
+}
+
+function FactSheetLink({
+  factsheet,
+  secondLang,
+  langInfo,
+}: {
+  factsheet: FactSheetStub;
+  secondLang: string | null;
+  langInfo: { rtl: boolean; nativeName: string } | null;
+}) {
+  const [playing, setPlaying] = useState(false);
+  const displayLang = secondLang && secondLang !== "da" && factsheet.audio_urls[secondLang] ? secondLang : "da";
+  const audioUrl = factsheet.audio_urls[displayLang];
+  const title = factsheet.title[displayLang] ?? factsheet.title["da"];
+  const langLabel = displayLang === "da" ? "Dansk" : (langInfo?.nativeName ?? displayLang.toUpperCase());
+
+  function handleListen() {
+    if (!audioUrl) return;
+    const audio = new Audio(audioUrl);
+    setPlaying(true);
+    audio.play();
+    audio.onended = () => setPlaying(false);
+  }
+
+  return (
+    <div className="rounded-lg border border-blue-200 bg-blue-50 px-4 py-3 flex items-start gap-3">
+      <span className="text-blue-500 mt-0.5 text-lg">📖</span>
+      <div className="flex-1 min-w-0">
+        <p className="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-1">
+          Læs mere om dette emne
+        </p>
+        <p
+          className="text-sm font-medium text-blue-900 truncate"
+          dir={langInfo?.rtl && displayLang !== "da" ? "rtl" : "ltr"}
+        >
+          {title}
+        </p>
+        {audioUrl && (
+          <button
+            onClick={handleListen}
+            disabled={playing}
+            className="mt-2 text-xs text-blue-700 underline hover:text-blue-900 disabled:opacity-50"
+          >
+            {playing ? "Afspiller…" : `Lyt på ${langLabel}`}
+          </button>
+        )}
+      </div>
     </div>
   );
 }

@@ -43,8 +43,16 @@ class QuestionSerializer(serializers.ModelSerializer):
         )
 
 
+class FactSheetStubSerializer(serializers.ModelSerializer):
+    """Minimal faktaark reference returned inside a question answer."""
+    class Meta:
+        model = FactSheet
+        fields = ("factsheet_id", "title", "audio_urls", "is_premium")
+
+
 class QuestionWithExplanationSerializer(QuestionSerializer):
     choices = ChoiceWithAnswerSerializer(many=True, read_only=True)
+    factsheet = FactSheetStubSerializer(read_only=True)
 
     class Meta(QuestionSerializer.Meta):
         fields = QuestionSerializer.Meta.fields + (
@@ -53,6 +61,7 @@ class QuestionWithExplanationSerializer(QuestionSerializer):
             "correct_answer_summary",
             "historical_note_sentences",
             "original_correct_text",
+            "factsheet",
         )
 
 

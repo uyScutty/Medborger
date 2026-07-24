@@ -35,6 +35,13 @@ export interface Category {
   question_count: number;
 }
 
+export interface FactSheetStub {
+  factsheet_id: string;
+  title: Record<string, string>;
+  audio_urls: Record<string, string>;
+  is_premium: boolean;
+}
+
 export interface Choice {
   id: number;
   text: string;
@@ -61,6 +68,7 @@ export interface Question {
   correct_answer_summary?: BilingualSentence;
   historical_note_sentences?: BilingualSentence[];
   original_correct_text?: string;
+  factsheet?: FactSheetStub | null;
 }
 
 export type ExamMode = "practice" | "mock_exam" | "official_exam";

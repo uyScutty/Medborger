@@ -46,6 +46,9 @@ class Question(models.Model):
     text = models.TextField()
     text_translations = models.JSONField(default=dict, blank=True)
     category = models.ForeignKey(Category, on_delete=models.PROTECT, related_name="questions")
+    factsheet = models.ForeignKey(
+        "FactSheet", null=True, blank=True, on_delete=models.SET_NULL, related_name="questions"
+    )
     subcategory = models.ForeignKey(
         Subcategory, null=True, blank=True, on_delete=models.SET_NULL, related_name="questions"
     )
