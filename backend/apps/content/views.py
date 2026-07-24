@@ -49,10 +49,14 @@ class QuestionListView(generics.ListAPIView):
 
 
 class QuestionDetailView(generics.RetrieveAPIView):
-    permission_classes = [permissions.IsAuthenticated, IsPremiumOrFreeContent]
+    permission_classes = [permissions.AllowAny]
 
     def get_queryset(self):
-        return Question.objects.filter(is_active=True).prefetch_related("choices")
+        qs = Question.objects.filter(is_active=True).prefetch_related("choices")
+        user = self.request.user
+        if not user.is_authenticated or not user.is_premium:
+            qs = qs.filter(is_free=True)
+        return qs
 
     def get_serializer_class(self):
         if self.request.query_params.get("with_answer") == "1":
@@ -62,22 +66,27 @@ class QuestionDetailView(generics.RetrieveAPIView):
 
 class OfficialExamListView(generics.ListAPIView):
     serializer_class = OfficialExamListSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.AllowAny]
     pagination_class = None
 
     def get_queryset(self):
         qs = OfficialExam.objects.filter(is_published=True)
-        if not self.request.user.is_premium:
+        user = self.request.user
+        if not user.is_authenticated or not user.is_premium:
             qs = qs.filter(is_free=True)
         return qs
 
 
 class OfficialExamDetailView(generics.RetrieveAPIView):
     serializer_class = OfficialExamDetailSerializer
-    permission_classes = [permissions.IsAuthenticated, IsPremiumOrFreeContent]
+    permission_classes = [permissions.AllowAny]
 
     def get_queryset(self):
-        return OfficialExam.objects.filter(is_published=True).prefetch_related("questions__choices")
+        qs = OfficialExam.objects.filter(is_published=True).prefetch_related("questions__choices")
+        user = self.request.user
+        if not user.is_authenticated or not user.is_premium:
+            qs = qs.filter(is_free=True)
+        return qs
 
 
 class FactSheetListView(generics.ListAPIView):

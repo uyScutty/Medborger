@@ -29,9 +29,10 @@ export function Header() {
             </>
           ) : (
             <>
+              <Link href="/prøve" className="text-sm text-gray-600 hover:text-brand-red transition-colors">Prøv gratis</Link>
               <Link href="/login" className="text-sm text-gray-600 hover:text-brand-red transition-colors">Log ind</Link>
               <Button size="sm" asChild>
-                <Link href="/register">Kom i gang — gratis</Link>
+                <Link href="/register">Kom i gang</Link>
               </Button>
             </>
           )}
@@ -62,6 +63,7 @@ export function Header() {
               </>
             ) : (
               <>
+                <Link href="/prøve" className="text-sm" onClick={() => setMenuOpen(false)}>Prøv gratis</Link>
                 <Link href="/login" className="text-sm" onClick={() => setMenuOpen(false)}>Log ind</Link>
                 <Link href="/register" className="text-sm font-medium text-brand-red" onClick={() => setMenuOpen(false)}>Opret konto</Link>
               </>

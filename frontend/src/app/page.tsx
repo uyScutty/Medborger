@@ -52,13 +52,13 @@ export default function LandingPage() {
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Button size="lg" asChild>
-              <Link href="/register">Start gratis i dag</Link>
+              <Link href="/prøve">Prøv gratis nu — ingen konto kræves</Link>
             </Button>
             <Button size="lg" variant="ghost" asChild>
-              <Link href="#priser">Se priserne</Link>
+              <Link href="/register">Opret konto →</Link>
             </Button>
           </div>
-          <p className="mt-4 text-sm text-gray-400">Ingen kreditkort kræves. Gratis for altid.</p>
+          <p className="mt-4 text-sm text-gray-400">Smagsprøve på 2016-eksamen uden login.</p>
         </div>
       </section>
 
@@ -118,7 +118,7 @@ export default function LandingPage() {
                 ))}
               </ul>
               <Button variant="ghost" size="lg" className="w-full" asChild>
-                <Link href="/register">Kom i gang</Link>
+                <Link href="/prøve">Prøv nu — ingen konto</Link>
               </Button>
             </Card>
 
@@ -159,11 +159,16 @@ export default function LandingPage() {
         <div className="mx-auto max-w-2xl px-4 text-center sm:px-6">
           <h2 className="text-3xl font-bold text-white">Klar til at tage det næste skridt?</h2>
           <p className="mt-3 text-brand-red-light opacity-90">
-            Tilmeld dig gratis og start øve dig i dag. Over tusinde spørgsmål venter.
+            Prøv den gratis eksamen nu — ingen konto nødvendig. Opgrader for ubegrænset adgang.
           </p>
-          <Button size="lg" variant="secondary" className="mt-8 bg-white text-brand-red hover:bg-gray-50" asChild>
-            <Link href="/register">Opret gratis konto →</Link>
-          </Button>
+          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+            <Button size="lg" variant="secondary" className="bg-white text-brand-red hover:bg-gray-50" asChild>
+              <Link href="/prøve">Prøv gratis nu →</Link>
+            </Button>
+            <Button size="lg" variant="ghost" className="text-white border-white hover:bg-white/10" asChild>
+              <Link href="/register">Opret konto</Link>
+            </Button>
+          </div>
         </div>
       </section>
     </>

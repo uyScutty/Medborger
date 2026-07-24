@@ -21,4 +21,6 @@ export const questionsApi = {
     ),
 
   exam: (id: number) => api.get<OfficialExam & { questions: Question[] }>(`/content/exams/${id}/`),
+
+  examDetail: (id: number) => api.get<OfficialExam & { questions: Question[] }>(`/content/exams/${id}/`),
 };
