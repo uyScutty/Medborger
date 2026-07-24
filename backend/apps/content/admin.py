@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils.html import format_html
 
-from .models import Category, Choice, OfficialExam, OfficialExamQuestion, Question
+from .models import Category, Choice, FactSheet, OfficialExam, OfficialExamQuestion, Question
 
 
 class ChoiceInline(admin.TabularInline):
@@ -28,6 +28,19 @@ class QuestionAdmin(admin.ModelAdmin):
     @admin.display(description="Spørgsmål")
     def short_text(self, obj):
         return obj.text[:80]
+
+
+@admin.register(FactSheet)
+class FactSheetAdmin(admin.ModelAdmin):
+    list_display = ("factsheet_id", "number", "da_title", "category", "subcategory", "is_premium", "order")
+    list_filter = ("category", "subcategory", "is_premium")
+    list_editable = ("is_premium", "order")
+    search_fields = ("factsheet_id",)
+    ordering = ("order", "number")
+
+    @admin.display(description="Titel (DA)")
+    def da_title(self, obj):
+        return obj.title.get("da", "—")
 
 
 class OfficialExamQuestionInline(admin.TabularInline):
