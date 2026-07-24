@@ -23,7 +23,6 @@ export function Header() {
           {user ? (
             <>
               <Link href="/dashboard" className="text-sm text-gray-600 hover:text-brand-red transition-colors">Dashboard</Link>
-              <Link href="/practice" className="text-sm text-gray-600 hover:text-brand-red transition-colors">Øvelse</Link>
               <Link href="/exams" className="text-sm text-gray-600 hover:text-brand-red transition-colors">Prøver</Link>
               <Link href="/konto" className="text-sm text-gray-600 hover:text-brand-red transition-colors">Konto</Link>
               <Button variant="ghost" size="sm" onClick={() => logout()}>Log ud</Button>
@@ -57,7 +56,6 @@ export function Header() {
             {user ? (
               <>
                 <Link href="/dashboard" className="text-sm" onClick={() => setMenuOpen(false)}>Dashboard</Link>
-                <Link href="/practice" className="text-sm" onClick={() => setMenuOpen(false)}>Øvelse</Link>
                 <Link href="/exams" className="text-sm" onClick={() => setMenuOpen(false)}>Prøver</Link>
                 <Link href="/konto" className="text-sm" onClick={() => setMenuOpen(false)}>Konto</Link>
                 <button className="text-left text-sm text-gray-500" onClick={() => logout()}>Log ud</button>
