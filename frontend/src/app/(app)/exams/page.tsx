@@ -37,38 +37,58 @@ export default function ExamsPage() {
   const [sessionTitle, setSessionTitle] = useState("");
   const [timerMinutes, setTimerMinutes] = useState<number | null>(null);
   const [attempt, setAttempt] = useState<ExamAttempt | null>(null);
-  const [questionIds, setQuestionIds] = useState<number[]>([]);
+  const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [currentQuestion, setCurrentQuestion] = useState<Question | null>(null);
 
   useEffect(() => {
     questionsApi.exams().then((d) => setExams(Array.isArray(d) ? d : [])).catch(() => {});
     questionsApi.categories().then((d) => setCategories(Array.isArray(d) ? d : [])).catch(() => {});
   }, []);
 
+  // Custom practice: fetch each question individually (premium users have full access)
   const loadQuestion = useCallback(async (id: number) => {
     const q = await questionsApi.get(id);
-    setCurrentQuestion(q);
-  }, []);
+    setQuestions((prev) => {
+      const next = [...prev];
+      next[currentIndex] = q;
+      return next;
+    });
+  }, [currentIndex]);
+
+  const [questionIds, setQuestionIds] = useState<number[]>([]);
 
   useEffect(() => {
-    if (state === "running" && questionIds[currentIndex]) {
+    if (state === "running" && questionIds.length > 0 && !questions[currentIndex]) {
       loadQuestion(questionIds[currentIndex]);
     }
-  }, [state, currentIndex, questionIds, loadQuestion]);
+  }, [state, currentIndex, questionIds, questions, loadQuestion]);
 
   async function handleStartExam(exam: OfficialExam) {
     setSessionTitle(exam.title);
     setTimerMinutes(exam.total_time_minutes);
-    const res = await practiceApi.start({ mode: "official_exam", official_exam_id: exam.id });
+
+    // Fetch exam detail (with embedded questions) and start attempt in parallel.
+    // Using the embedded questions avoids individual per-question fetches that
+    // would fail for non-premium users if the question filter is strict.
+    const [res, detail] = await Promise.all([
+      practiceApi.start({ mode: "official_exam", official_exam_id: exam.id }),
+      questionsApi.examDetail(exam.id),
+    ]);
+
+    const qMap = new Map(detail.questions.map((q) => [q.id, q]));
+    const ordered = res.question_ids
+      .map((id) => qMap.get(id))
+      .filter((q): q is Question => q != null);
+
     setAttempt(res);
     setQuestionIds(res.question_ids);
+    setQuestions(ordered);
     setCurrentIndex(0);
     setState("running");
   }
 
   async function handleStartCustom() {
-    setSessionTitle(`Tilpasset øvelse · ${numQuestions} spørgsmål`);
+    setSessionTitle(`${numQuestions} spørgsmål`);
     setTimerMinutes(null);
     const res = await practiceApi.start({
       mode: "practice",
@@ -77,12 +97,16 @@ export default function ExamsPage() {
     });
     setAttempt(res);
     setQuestionIds(res.question_ids);
+    setQuestions([]);
     setCurrentIndex(0);
     setState("running");
   }
 
   async function handleAnswer(choiceId: number) {
-    return practiceApi.submitAnswer(attempt!.id, { question_id: currentQuestion!.id, choice_id: choiceId });
+    return practiceApi.submitAnswer(attempt!.id, {
+      question_id: questions[currentIndex]!.id,
+      choice_id: choiceId,
+    });
   }
 
   async function handleNext() {
@@ -104,8 +128,8 @@ export default function ExamsPage() {
   function handleRetry() {
     setAttempt(null);
     setQuestionIds([]);
+    setQuestions([]);
     setCurrentIndex(0);
-    setCurrentQuestion(null);
     setState("list");
   }
 
@@ -120,6 +144,7 @@ export default function ExamsPage() {
   }
 
   if (state === "running") {
+    const currentQuestion = questions[currentIndex] ?? null;
     return (
       <div className="mx-auto max-w-2xl px-4 py-10">
         <div className="mb-4 flex items-center justify-between gap-4">
@@ -132,7 +157,7 @@ export default function ExamsPage() {
           </div>
         </div>
         {!currentQuestion ? (
-          <div className="flex h-64 items-center justify-center text-gray-400">Indlæser spørgsmål…</div>
+          <div className="flex h-64 items-center justify-center text-gray-400">Indlæser…</div>
         ) : (
           <QuestionCard
             question={currentQuestion}
@@ -150,7 +175,7 @@ export default function ExamsPage() {
     <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-gray-900">Prøver</h1>
-        <p className="mt-1 text-gray-500">Gennemgå officielle prøver eller lav din egen øvelse.</p>
+        <p className="mt-1 text-gray-500">Gennemgå officielle prøver eller lav din egen tilpassede session.</p>
       </div>
 
       {/* Language selector */}
@@ -186,20 +211,10 @@ export default function ExamsPage() {
         )}
       </div>
 
-      {/* ── Section 1: Tidligere officielle prøver ── */}
+      {/* ── Section 1: Officielle prøver ── */}
       <div className="mb-10">
-        <h2 className="mb-1 text-lg font-bold text-gray-900">Tidligere officielle prøver</h2>
+        <h2 className="mb-1 text-lg font-bold text-gray-900">Officielle prøver</h2>
         <p className="mb-4 text-sm text-gray-500">Løs tidligere indfødsretsprøver under realistiske betingelser.</p>
-
-        {!user.is_premium && (
-          <div className="mb-4 rounded-lg border border-brand-navy/20 bg-brand-navy-light p-4">
-            <p className="font-semibold text-brand-navy">Premium-indhold</p>
-            <p className="mt-1 text-sm text-brand-navy/80">
-              Som Premium-bruger får du adgang til alle tidligere prøver.{" "}
-              <Link href="/priser" className="underline font-medium">Opgradér nu →</Link>
-            </p>
-          </div>
-        )}
 
         <div className="grid gap-4 sm:grid-cols-2">
           {exams.map((exam) => {
@@ -234,27 +249,33 @@ export default function ExamsPage() {
             <p className="col-span-2 py-12 text-center text-gray-400">Ingen prøver tilgængelige endnu.</p>
           )}
         </div>
+
+        {!user.is_premium && (
+          <p className="mt-4 text-sm text-gray-400">
+            Alle tidligere prøver er tilgængelige med{" "}
+            <Link href="/priser" className="text-brand-red underline">Premium</Link>.
+          </p>
+        )}
       </div>
 
-      {/* ── Section 2: Yderligere spørgsmål (premium) ── */}
+      {/* ── Section 2: Tilpassede spørgsmål (premium) ── */}
       <div>
         <div className="mb-1 flex items-center gap-3">
-          <h2 className="text-lg font-bold text-gray-900">Yderligere spørgsmål</h2>
+          <h2 className="text-lg font-bold text-gray-900">Tilpassede spørgsmål</h2>
           <Badge variant="premium">Premium</Badge>
         </div>
-        <p className="mb-4 text-sm text-gray-500">Lav din egen tilpassede øvelse — vælg kategorier og antal spørgsmål.</p>
+        <p className="mb-4 text-sm text-gray-500">Vælg kategorier og antal spørgsmål og lav din egen session.</p>
 
         {!user.is_premium ? (
           <div className="rounded-lg border border-brand-navy/20 bg-brand-navy-light p-5">
             <p className="font-semibold text-brand-navy">Kun for Premium-brugere</p>
             <p className="mt-1 text-sm text-brand-navy/80">
-              Få adgang til ubegrænsede tilpassede øvelser på tværs af alle kategorier.{" "}
+              Få adgang til ubegrænsede tilpassede sessioner på tværs af alle kategorier.{" "}
               <Link href="/priser" className="underline font-medium">Opgradér nu →</Link>
             </p>
           </div>
         ) : (
           <Card className="space-y-5">
-            {/* Category picker */}
             <div>
               <p className="mb-2 text-sm font-medium text-gray-700">
                 Kategorier <span className="text-gray-400">(alle hvis ingen er valgt)</span>
@@ -283,7 +304,6 @@ export default function ExamsPage() {
               </div>
             </div>
 
-            {/* Question count */}
             <div>
               <p className="mb-2 text-sm font-medium text-gray-700">
                 Antal spørgsmål: <strong>{numQuestions}</strong>
@@ -303,7 +323,7 @@ export default function ExamsPage() {
             </div>
 
             <Button onClick={handleStartCustom} className="w-full">
-              Start øvelse →
+              Start session →
             </Button>
           </Card>
         )}

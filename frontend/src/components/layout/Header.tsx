@@ -4,7 +4,6 @@ import { useAuth } from "@/lib/auth/context";
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "../ui/Button";
-import { LanguageSelector } from "../ui/LanguageSelector";
 
 export function Header() {
   const { user, logout } = useAuth();
@@ -19,7 +18,6 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center gap-4 sm:flex">
-          <LanguageSelector />
           {user ? (
             <>
               <Link href="/dashboard" className="text-sm text-gray-600 hover:text-brand-red transition-colors">Dashboard</Link>

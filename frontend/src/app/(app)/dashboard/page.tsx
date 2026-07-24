@@ -53,7 +53,7 @@ export default function DashboardPage() {
           title="Yderligere spørgsmål"
           description="Lav din egen tilpassede øvelse — vælg kategorier og antal spørgsmål"
           href="/exams"
-          cta={user.is_premium ? "Start øvelse" : "Lås op med Premium"}
+          cta={user.is_premium ? "Start session" : "Lås op med Premium"}
           locked={!user.is_premium}
         />
       </div>
