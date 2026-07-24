@@ -4,7 +4,7 @@ import { api } from "./client";
 export const questionsApi = {
   categories: () =>
     api.get<{ results: Category[] } | Category[]>("/content/categories/").then((r) =>
-      Array.isArray(r) ? r : r.results
+      Array.isArray(r) ? r : (r.results ?? [])
     ),
 
   list: (params?: { category__slug?: string; difficulty?: string }) => {
@@ -17,7 +17,7 @@ export const questionsApi = {
 
   exams: () =>
     api.get<{ results: OfficialExam[] } | OfficialExam[]>("/content/exams/").then((r) =>
-      Array.isArray(r) ? r : r.results
+      Array.isArray(r) ? r : (r.results ?? [])
     ),
 
   exam: (id: number) => api.get<OfficialExam & { questions: Question[] }>(`/content/exams/${id}/`),

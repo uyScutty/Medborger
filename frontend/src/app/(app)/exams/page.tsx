@@ -42,8 +42,8 @@ export default function ExamsPage() {
   const [currentQuestion, setCurrentQuestion] = useState<Question | null>(null);
 
   useEffect(() => {
-    questionsApi.exams().then(setExams).catch(() => {});
-    questionsApi.categories().then(setCategories).catch(() => {});
+    questionsApi.exams().then((d) => setExams(Array.isArray(d) ? d : [])).catch(() => {});
+    questionsApi.categories().then((d) => setCategories(Array.isArray(d) ? d : [])).catch(() => {});
   }, []);
 
   const loadQuestion = useCallback(async (id: number) => {
