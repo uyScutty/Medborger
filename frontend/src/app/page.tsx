@@ -1,143 +1,72 @@
+import { PublicExam } from "@/components/exam/PublicExam";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import Link from "next/link";
 
-const features = [
-  {
-    icon: "📋",
-    title: "Tidligere officielle prøver",
-    description: "Løs alle tidligere indfødsretsprøver under realistiske betingelser med tidtagning og officiel bedømmelse.",
-  },
-  {
-    icon: "🌍",
-    title: "To sprog side om side",
-    description: "Vælg dit modersmål — spørgsmål og forklaringer vises på dansk og dit valgte sprog samtidig.",
-  },
-  {
-    icon: "📊",
-    title: "Fremskridtsovervågning",
-    description: "Se dine stærke og svage kategorier på ét overblik, og fokusér din studietid der, hvor det tæller.",
-  },
-  {
-    icon: "✏️",
-    title: "Yderligere spørgsmål",
-    description: "Lav din egen tilpassede øvelse med valgfrie kategorier og antal spørgsmål. Kun for Premium-brugere.",
-  },
-];
-
-const categories = [
-  { icon: "🏰", name: "Danmarks Historie" },
-  { icon: "🤝", name: "Det danske samfund" },
-  { icon: "🗳️", name: "Demokrati & Rettigheder" },
-  { icon: "🎭", name: "Dansk kultur" },
-  { icon: "🏡", name: "Hverdagsliv i Danmark" },
-];
-
 export default function LandingPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-white via-brand-red-light to-white py-20 sm:py-28">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-red/20 bg-white px-4 py-1.5 text-sm text-brand-red shadow-sm">
-            <span>🇩🇰</span> Forberedelse til indfødsretsprøven
+      {/* Hero + Exam */}
+      <section className="bg-gradient-to-b from-gray-50 to-white py-10 sm:py-14">
+        <div className="mx-auto max-w-2xl px-4 sm:px-6">
+          <div className="mb-8 text-center">
+            <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-brand-red/20 bg-white px-4 py-1.5 text-sm text-brand-red shadow-sm">
+              <span>🇩🇰</span> Forberedelse til indfødsretsprøven
+            </div>
+            <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              Bestå prøven med <span className="text-brand-red">selvtillid</span>
+            </h1>
+            <p className="mx-auto mt-3 max-w-lg text-base text-gray-500">
+              Tag den officielle 2016-eksamen direkte her — vælg dit modersmål og se spørgsmål på to sprog side om side.
+            </p>
           </div>
-          <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-6xl">
-            Bestå prøven med{" "}
-            <span className="text-brand-red">selvtillid</span>
-          </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600 leading-relaxed">
-            Medborger hjælper dig med at forberede dig til den danske indfødsretsprøve med strukturerede øvelser,
-            alle tidligere prøver og forklaringer, der giver rigtig forståelse.
-          </p>
-          <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <Button size="lg" asChild>
-              <Link href="/prøve">Prøv gratis nu — ingen konto kræves</Link>
-            </Button>
-            <Button size="lg" variant="ghost" asChild>
-              <Link href="/register">Opret konto →</Link>
-            </Button>
-          </div>
-          <p className="mt-4 text-sm text-gray-400">Smagsprøve på 2016-eksamen uden login.</p>
+
+          {/* The exam — this is the main content */}
+          <PublicExam />
         </div>
       </section>
 
-      {/* Categories */}
-      <section className="bg-white py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <h2 className="text-center text-2xl font-bold text-gray-900">5 emneområder at mestre</h2>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            {categories.map((cat) => (
-              <span key={cat.name} className="flex items-center gap-2 rounded-full bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700">
-                {cat.icon} {cat.name}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features */}
-      <section className="py-20 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-900">Alt du behøver for at klare prøven</h2>
-            <p className="mt-3 text-gray-500">Bygget specifikt til indfødsretsprøven — ingen unødvendige distraktioner.</p>
-          </div>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {features.map((f) => (
-              <Card key={f.title} className="space-y-3">
-                <span className="text-3xl">{f.icon}</span>
-                <h3 className="font-semibold text-gray-900">{f.title}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">{f.description}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing */}
-      <section id="priser" className="py-20 bg-white">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-900">Enkle, ærlige priser</h2>
-            <p className="mt-3 text-gray-500">Start gratis — opgrader kun når du er klar.</p>
-          </div>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+      {/* Pricing — short and to the point */}
+      <section id="priser" className="border-t border-gray-100 bg-white py-16">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
+          <h2 className="mb-8 text-center text-2xl font-bold text-gray-900">Vil du have adgang til mere?</h2>
+          <div className="grid gap-6 sm:grid-cols-2">
             {/* Free */}
-            <Card className="space-y-5">
+            <Card className="space-y-4">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-wide text-gray-500">Gratis</p>
-                <p className="mt-1 text-4xl font-bold text-gray-900">0 kr</p>
-                <p className="mt-1 text-sm text-gray-400">for evigt</p>
+                <p className="mt-1 text-3xl font-bold text-gray-900">0 kr</p>
               </div>
               <ul className="space-y-2 text-sm text-gray-600">
-                {["Adgang til 1 tidligere officiel prøve", "Grundlæggende statistik", "Tosproglig visning (8 sprog)"].map((item) => (
+                {[
+                  "2016-prøven — ingen konto kræves",
+                  "Tosproglig visning (8 sprog)",
+                  "Forklaringer og faktaark",
+                ].map((item) => (
                   <li key={item} className="flex items-center gap-2">
                     <span className="text-green-500">✓</span> {item}
                   </li>
                 ))}
               </ul>
-              <Button variant="ghost" size="lg" className="w-full" asChild>
-                <Link href="/prøve">Prøv nu — ingen konto</Link>
+              <Button variant="ghost" className="w-full" asChild>
+                <Link href="/register">Opret konto</Link>
               </Button>
             </Card>
 
             {/* Premium */}
-            <Card className="space-y-5 border-brand-red ring-2 ring-brand-red">
+            <Card className="space-y-4 border-brand-red ring-2 ring-brand-red">
               <div>
                 <div className="flex items-center justify-between">
                   <p className="text-sm font-semibold uppercase tracking-wide text-brand-red">Premium</p>
                   <span className="rounded-full bg-brand-red px-2.5 py-0.5 text-xs font-semibold text-white">Anbefalet</span>
                 </div>
-                <p className="mt-1 text-4xl font-bold text-gray-900">79 kr</p>
-                <p className="mt-1 text-sm text-gray-400">pr. måned — eller 499 kr/år</p>
+                <p className="mt-1 text-3xl font-bold text-gray-900">79 kr</p>
+                <p className="text-sm text-gray-400">pr. måned</p>
               </div>
               <ul className="space-y-2 text-sm text-gray-600">
                 {[
                   "Alle tidligere officielle prøver",
-                  "Yderligere spørgsmål — vælg selv kategorier",
-                  "Detaljerede forklaringer på dit sprog",
-                  "Tidstagning og officiel prøveform",
+                  "Tilpassede sessioner — vælg kategorier",
                   "Fremskridtsanalyse per kategori",
                   "Tosproglig visning (8 sprog)",
                 ].map((item) => (
@@ -146,28 +75,10 @@ export default function LandingPage() {
                   </li>
                 ))}
               </ul>
-              <Button size="lg" className="w-full" asChild>
+              <Button className="w-full" asChild>
                 <Link href="/register">Prøv 7 dage gratis</Link>
               </Button>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="bg-brand-red py-16">
-        <div className="mx-auto max-w-2xl px-4 text-center sm:px-6">
-          <h2 className="text-3xl font-bold text-white">Klar til at tage det næste skridt?</h2>
-          <p className="mt-3 text-brand-red-light opacity-90">
-            Prøv den gratis eksamen nu — ingen konto nødvendig. Opgrader for ubegrænset adgang.
-          </p>
-          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <Button size="lg" variant="secondary" className="bg-white text-brand-red hover:bg-gray-50" asChild>
-              <Link href="/prøve">Prøv gratis nu →</Link>
-            </Button>
-            <Button size="lg" variant="ghost" className="text-white border-white hover:bg-white/10" asChild>
-              <Link href="/register">Opret konto</Link>
-            </Button>
           </div>
         </div>
       </section>
