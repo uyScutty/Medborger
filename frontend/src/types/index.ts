@@ -1,7 +1,7 @@
 export type SubscriptionTier = "free" | "premium";
 
 export type QuestionStatus = "valid" | "updated" | "retired";
-export type SupportedLanguage = "da" | "en" | "ar" | "so" | "tr" | "ur";
+export type SupportedLanguage = "da" | "en" | "ar" | "tr" | "uk" | "th" | "tl" | "fa";
 
 export interface BilingualSentence {
   da: string;

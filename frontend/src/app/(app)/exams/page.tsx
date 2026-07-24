@@ -13,6 +13,8 @@ import { ProgressBar } from "@/components/ui/ProgressBar";
 import type { ExamAttempt, OfficialExam, Question } from "@/types";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
+import { LANGUAGES, useLanguage } from "@/lib/language/context";
+import type { SupportedLanguage } from "@/types";
 
 type State = "list" | "running" | "complete";
 
@@ -24,6 +26,7 @@ const monthName: Record<number, string> = {
 
 export default function ExamsPage() {
   const user = useRequireAuth();
+  const { secondLang, setSecondLang } = useLanguage();
   const [exams, setExams] = useState<OfficialExam[]>([]);
   const [state, setState] = useState<State>("list");
   const [selectedExam, setSelectedExam] = useState<OfficialExam | null>(null);
@@ -116,6 +119,43 @@ export default function ExamsPage() {
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-gray-900">Tidligere officielle prøver</h1>
         <p className="mt-1 text-gray-500">Løs alle tidligere indfødsretsprøver under realistiske betingelser.</p>
+      </div>
+
+      {/* Language selector */}
+      <div className="mb-6 rounded-xl border border-gray-200 bg-white p-4">
+        <p className="mb-3 text-sm font-semibold text-gray-700">
+          Vis spørgsmål og svar på et andet sprog ved siden af dansk
+        </p>
+        <div className="flex flex-wrap gap-2">
+          <button
+            onClick={() => setSecondLang(null)}
+            className={`rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
+              !secondLang
+                ? "bg-gray-900 text-white"
+                : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+            }`}
+          >
+            Kun dansk
+          </button>
+          {LANGUAGES.filter((l) => l.code !== "da").map((l) => (
+            <button
+              key={l.code}
+              onClick={() => setSecondLang(l.code as SupportedLanguage)}
+              className={`rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
+                secondLang === l.code
+                  ? "bg-brand-red text-white"
+                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+              }`}
+            >
+              {l.nativeName}
+            </button>
+          ))}
+        </div>
+        {secondLang && (
+          <p className="mt-2 text-xs text-gray-400">
+            Spørgsmål vises på dansk + {LANGUAGES.find((l) => l.code === secondLang)?.name ?? secondLang}
+          </p>
+        )}
       </div>
 
       {!user.is_premium && (

@@ -11,12 +11,14 @@ export interface LanguageInfo {
 }
 
 export const LANGUAGES: LanguageInfo[] = [
-  { code: "da", name: "Dansk",   nativeName: "Dansk",     rtl: false },
-  { code: "en", name: "Engelsk", nativeName: "English",   rtl: false },
-  { code: "ar", name: "Arabisk", nativeName: "العربية",   rtl: true  },
-  { code: "so", name: "Somali",  nativeName: "Soomaali",  rtl: false },
-  { code: "tr", name: "Tyrkisk", nativeName: "Türkçe",    rtl: false },
-  { code: "ur", name: "Urdu",    nativeName: "اردو",       rtl: true  },
+  { code: "da", name: "Dansk",   nativeName: "Dansk",       rtl: false },
+  { code: "en", name: "Engelsk", nativeName: "English",     rtl: false },
+  { code: "ar", name: "Arabisk", nativeName: "العربية",     rtl: true  },
+  { code: "tr", name: "Tyrkisk", nativeName: "Türkçe",      rtl: false },
+  { code: "uk", name: "Ukrainsk",nativeName: "Українська",  rtl: false },
+  { code: "th", name: "Thai",    nativeName: "ภาษาไทย",     rtl: false },
+  { code: "tl", name: "Tagalog", nativeName: "Tagalog",     rtl: false },
+  { code: "fa", name: "Persisk", nativeName: "فارسی",       rtl: true  },
 ];
 
 const STORAGE_KEY = "medborger_translation_lang";
