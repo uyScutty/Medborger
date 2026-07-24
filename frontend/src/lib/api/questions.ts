@@ -12,7 +12,10 @@ export const questionsApi = {
   get: (id: number, withAnswer = false) =>
     api.get<Question>(`/content/questions/${id}/${withAnswer ? "?with_answer=1" : ""}`),
 
-  exams: () => api.get<OfficialExam[]>("/content/exams/"),
+  exams: () =>
+    api.get<{ results: OfficialExam[] } | OfficialExam[]>("/content/exams/").then((r) =>
+      Array.isArray(r) ? r : r.results
+    ),
 
   exam: (id: number) => api.get<OfficialExam & { questions: Question[] }>(`/content/exams/${id}/`),
 };
